@@ -38,7 +38,10 @@
     <!-- Load Fonts CSS End -->
 
     <!-- Load Custom CSS Start -->
+<<<<<<< HEAD
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+=======
+>>>>>>> remont.anycomp/master
     
     <script>loadCSS( "/css/main.min.css?ver=1.0.0", false, "all" );</script>
     <!-- Load Custom CSS End -->

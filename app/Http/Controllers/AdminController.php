@@ -14,8 +14,14 @@ class AdminController extends Controller {
         return view('admin.index');
     }
 
+<<<<<<< HEAD
     public function login(User $userModel){
 
         return view('admin.login');
+=======
+    public function enter(User $userModel){
+
+        return view('admin.enter');
+>>>>>>> remont.anycomp/master
     }
 }

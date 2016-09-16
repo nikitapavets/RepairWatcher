@@ -19,7 +19,11 @@ var gulp         = require('gulp'),
 gulp.task('connect-sync', function () {
     connect.server({}, function () {
         browserSync({
+<<<<<<< HEAD
             proxy: 'remont.anycomp/',
+=======
+            proxy: 'catalog.anycomp/',
+>>>>>>> remont.anycomp/master
             notify: false
         });
     });
@@ -50,8 +54,12 @@ gulp.task('scriptlibs', function() {
         'resources/assets/libs/jquery/jquery-1.11.2.min.js',
         'resources/assets/libs/animate/animate-css.js',
         'resources/assets/libs/Magnific-Popup/jquery.magnific-popup.min.js',
+<<<<<<< HEAD
         'resources/assets/libs/jQuery.equalHeights/jquery.equalheights.min.js',
         'resources/assets/libs/materialize/js/materialize.min.js'
+=======
+        'resources/assets/libs/jQuery.equalHeights/jquery.equalheights.min.js'
+>>>>>>> remont.anycomp/master
     ])
     .pipe(uglify())
     .pipe(concat('libs.js'))

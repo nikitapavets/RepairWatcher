@@ -16,5 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('admin',                 ['as' => 'admin', 'uses' => 'AdminController@index']);
+<<<<<<< HEAD
 Route::get('admin/login',           ['as' => 'admin.login', 'uses' => 'AdminController@login']);
 Route::get('admin/registration',    ['as' => 'admin.registration', 'uses' => 'AdminController@login']);
+=======
+Route::get('admin/enter',           ['as' => 'admin.enter', 'uses' => 'AdminController@enter']);
+>>>>>>> remont.anycomp/master
