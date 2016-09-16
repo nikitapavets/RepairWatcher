@@ -2,5 +2,5 @@
 
 @section('content')
    admin
-    {!! link_to_route('admin.enter', "Войти") !!}
+    {!! link_to_route('admin.login', "Войти") !!}
 @stop
