@@ -142,4 +142,26 @@
       .button_wrap
         text-align: center
 
+    .table_wrap
+      a
+        text-decoration: underline
+        &:hover, &:focus, &:active
+          text-decoration: none
+      .about_client
+        padding: 15px!important
+        width: 450px!important
+        &--field_wrap
+          clear: both
+        &--title, &--value
+          display: inline-block
+          padding: 10px 0
+        &--title
+          width: 135px
+          text-align: right
+          margin-right: 15px
+          font-weight: bold
+        &--value
+          width: 265px
+          text-decoration: underline
+
 @import "media"

@@ -43,7 +43,7 @@
                     <ul>
                         <li><a href="/admin"><i class="fa fa-home" aria-hidden="true"></i>Главная</a></li>
                         <li><a href="/admin?section=maintenance&action=add"><i class="fa fa-plus" aria-hidden="true"></i>Добавить в ремонт</a></li>
-                        <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i>В ремонте</a></li>
+                        <li><a href="/admin?section=maintenance&action=list"><i class="fa fa-wrench" aria-hidden="true"></i>В ремонте</a></li>
                     </ul>
 
                 </div>
