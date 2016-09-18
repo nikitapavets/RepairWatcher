@@ -4,13 +4,19 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
+
+  .admin_panel
+    .content_wrap
+      .left--menu
+        &.slide-off
+          transform: translateX(0)
+        &.slide-on
+          transform: translateX(-100%)
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   /**/
-
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -38,7 +44,12 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
+
+  .admin_panel
+    padding-top: 56px
+    .content_wrap
+     .left--menu
+       top: 56px
 
 
 @media only screen and (max-width : 375px)
@@ -74,5 +85,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-  /**/
+
+  .admin_panel
+    .content
+      header
+      &.slide-off
+        margin-left: 0
+      &.slide-on
+        margin-left: 301px
 

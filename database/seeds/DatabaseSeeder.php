@@ -28,7 +28,8 @@ class UsersSeeder extends Seeder{
             'password' => '6136132',
             'first_name' => 'Никита',
             'second_name' => 'Павец',
-            'rang' => 'admin'
+            'rang' => 'admin',
+            'img' => '/img/team/nikita.png'
         ]);
 
         User::create([
@@ -36,7 +37,8 @@ class UsersSeeder extends Seeder{
             'password' => '7155929',
             'first_name' => 'Алёна',
             'second_name' => 'Каримова',
-            'rang' => 'admin'
+            'rang' => 'admin',
+            'img' => '/img/team/alena.png'
         ]);
 
         User::create([
@@ -44,7 +46,8 @@ class UsersSeeder extends Seeder{
             'password' => '7175804',
             'first_name' => 'Дмитрий',
             'second_name' => 'Каримов',
-            'rang' => 'admin'
+            'rang' => 'admin',
+            'img' => '/img/team/dima.png'
         ]);
     }
 }

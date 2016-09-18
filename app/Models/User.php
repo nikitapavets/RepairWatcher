@@ -29,4 +29,14 @@ class User extends Model
 
         $query->where('rang', '=', 'user');
     }
+
+    public function getAdmin($login, $password){
+
+        $admin = $this->admins()
+            ->where('login', '=', $login)
+            ->where('password', '=', $password)
+            ->first();
+
+        return $admin;
+    }
 }

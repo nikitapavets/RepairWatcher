@@ -37,7 +37,7 @@ gulp.task('styles', function () {
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('scripts', ['scriptlibs'], function() {
+gulp.task('scripts', function() {
     return gulp.src('resources/assets/js/*.js')
     .pipe(uglify())
     .pipe(concat('main.min.js'))

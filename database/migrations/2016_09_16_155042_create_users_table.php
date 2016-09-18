@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('first_name')->nullable();
             $table->string('second_name')->nullable();
+            $table->string('img')->nullable();
             $table->enum('rang', array('user', 'admin'))->default('user');
             $table->timestamps();
         });
@@ -32,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('users');
     }
 }
