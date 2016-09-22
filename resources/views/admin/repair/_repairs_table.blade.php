@@ -5,10 +5,11 @@
         <th data-field="title">Наименование</th>
         <th data-field="token">Код</th>
         <th data-field="client">Заказчик</th>
-        <th data-field="set">В комплекте</th>
-        <th data-field="diagnosis">Дигноз</th>
+        <th data-field="set">Комплектность</th>
+        <th data-field="diagnosis">Неисправность</th>
         <th data-field="date">Сдан в ремонт</th>
         <th data-field="status">Статус</th>
+        <th data-field="func"></th>
     </tr>
     </thead>
 
@@ -30,11 +31,13 @@
             $date = $repair->adopted_in;
             $address = $repair->address;
             $tel = $repair->tel;
+            $id = $repair->id;
             $status_color = 'blue-text';
             $status = '';
             switch($repair->status){
                 case 'repair':
                     $status = 'Ремонт';
+                    $status_color = 'teal-text';
                     break;
                 case 'complete':
                     $status = 'Готов';
@@ -57,6 +60,10 @@
             <td>{{ $diagnosist }}</td>
             <td>{{ $date }}</td>
             <td class="{{ $status_color }}">{{ $status }}</td>
+            <td class="func">
+                <a href="admin/repair/edit/{{ $id }}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-check-square" aria-hidden="true"></i></a>
+            </td>
 
             <!-- Dropdown Structure -->
             <div id='{{ 'dropdown'.$repair->receipt_number }}' class='dropdown-content about_client card'>

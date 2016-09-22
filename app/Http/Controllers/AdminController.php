@@ -102,4 +102,8 @@ class AdminController extends Controller {
         return redirect()->route('admin');
     }
 
+    public function repairEdit($id){
+        echo $id;
+    }
+
 }

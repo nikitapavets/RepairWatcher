@@ -12,18 +12,18 @@
         @php
             $repairs = $repairs_paid;
         @endphp
-        @include('admin.maintenance._repairs_table')
+        @include('admin.repair._repairs_table')
     </div>
     <div id="guarantee" class="card">
         @php
             $repairs = $repairs_free;
         @endphp
-        @include('admin.maintenance._repairs_table')
+        @include('admin.repair._repairs_table')
     </div>
     <div id="complete" class="card">
         @php
             $repairs = $repairs_complete;
         @endphp
-        @include('admin.maintenance._repairs_table')
+        @include('admin.repair._repairs_table')
     </div>
 </div>

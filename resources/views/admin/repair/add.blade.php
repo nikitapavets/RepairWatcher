@@ -1,10 +1,14 @@
+@extends ('admin.admin_wrap')
+
+@section('admin_content')
+
 <header class="content--title">
     <p>Добавить в ремонт</p>
 </header>
 
 <div class="card">
 
-    {{ Form::open(array('url' => '/admin/maintenance/save')) }}
+    {{ Form::open(array('url' => 'repair')) }}
 
     <div class="row">
 
@@ -58,11 +62,11 @@
                 </div>
                 <div class="input-field">
                     <input id="product_set" type="text" class="validate" name="product_set">
-                    <label for="product_set">Комплект</label>
+                    <label for="product_set">Комплектность</label>
                 </div>
                 <div class="input-field">
                     <textarea id="product_diagnosis" class="materialize-textarea" name="product_diagnosis"></textarea>
-                    <label for="product_diagnosis">Диагноз</label>
+                    <label for="product_diagnosis">Неисправность</label>
                 </div>
 
             </div>
@@ -108,3 +112,5 @@
     {{ Form::close() }}
 
 </div>
+
+@stop

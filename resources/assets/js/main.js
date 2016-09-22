@@ -38,4 +38,3 @@ $( document ).ready(function(){
         firstDay: 1
     });
 });
-
