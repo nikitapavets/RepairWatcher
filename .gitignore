@@ -1,7 +1,7 @@
-/node_modules
-/public/storage
-/vendor
+src/node_modules
+src/public/storage
+src/vendor
 /.idea
-Homestead.json
-Homestead.yaml
-.env
+src/Homestead.json
+src/Homestead.yaml
+src/*.env
