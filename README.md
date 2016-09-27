@@ -46,8 +46,8 @@ But, by the Manager, user should be able to fill forms, and communicate with cus
 Because this system has much in common with company database, will be nice to connect currently the system with company by, for example,
 1C or Excel.
 
-# System Requirements
-## *Functional Requirements*
+## System Requirements
+### *Functional Requirements*
 * Manager registration
   * via email and password
   * via VK
@@ -93,8 +93,8 @@ Because this system has much in common with company database, will be nice to co
   * See repair's progress
   * Sending report
   
-## *Non-Functional Requirements*
-### *Software quality attributes*
+### *Non-Functional Requirements*
+#### *Software quality attributes*
 * Security
   * Only manager can add, edit and remove product
   * Only manager can add new managers
