@@ -37,4 +37,9 @@ $( document ).ready(function(){
         close: 'Закрыть',
         firstDay: 1
     });
+
+    $('#showMenu').click(function(){
+        $('.progress--header__top-menu').toggleClass('showme');
+    });
+
 });

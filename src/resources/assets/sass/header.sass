@@ -17,11 +17,10 @@
 .progress
   &--wrap
     background-size: cover
-    margin-top: 25px
+    margin-top: 50px
   &--description
     background-color: #FFFFFF
     padding: 50px 25px 25px
-    margin-bottom: 25px
     .positive
       &--wrap
         margin-bottom: 25px
@@ -29,6 +28,7 @@
         padding-top: 25px
   &--header
     padding-bottom: 100px
+    position: relative
     &__top-menu
       float: right
       ul
@@ -45,6 +45,14 @@
             line-height:  em(64px)
             &:hover
               text-decoration: underline
+      &--ico
+        position: absolute
+        right: 15px
+        top: 15px
+        display: none
+        img
+          width: 40px
+
     &__title
       text-align: center
       margin-top: 100px
@@ -83,5 +91,60 @@
             right: 26px
             width: 28px
             height: 28px
+  
+  &--how-to-user
+    background-color: #324A5E
+    margin-bottom: 50px
+    padding: 50px 25px
+    color: #FFFFFF
+    .feed-back
+      position: relative
+      text-align: right
+      .field
+        &-wrap
+          text-align: left
+          margin: 15px 0
+        &-img
+          width: 40px
+          position: absolute
+        &-input, &-text
+          display: inline-block
+          width: 100%
+          padding-left: 60px
+          textarea, input
+            width: 100%
+            border: none
+            border-radius: 10px
+            resize: none
+            color: #333
+            outline: none
+            padding: 10px
+        &-text
+          line-height: em(36px)
+      button
+        border: none
+        background-color: #FFCA4F
+        font-size: em(18px)
+        text-transform: uppercase
+        padding: 0 15px
+        border-radius: 10px
+        color: #324A5E
+        line-height: em(36px)
+
+  &--section-header
+    text-align: center
+    font-size: em(36px)
+    position: relative
+    margin-bottom: 75px
+    &:before
+      position: absolute
+      content: ''
+      width: 150px
+      height: 3px
+      background-color: #FFFFFF
+      bottom: -25px
+      left: 50%
+      transform: translateX(-50%)
+
 
 @import "media"
