@@ -42,6 +42,15 @@
     -ms-animation: none !important
     animation: none !important
 
+  .progress
+    &--header
+      &__title
+        line-height: em(52px)
+        .main
+          font-size: em(48px)
+        .sub
+          font-size: em(36px)
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
@@ -51,6 +60,19 @@
      .left--menu
        top: 56px
 
+  .progress
+    &--header
+      &__title
+        line-height: em(36px)
+        .main
+          font-size: em(28px)
+        .sub
+          font-size: em(22px)
+    &--description
+      padding: 50px 15px 25px
+      .positive
+        &--description
+          padding-top: 0px
 
 @media only screen and (max-width : 375px)
   /**/

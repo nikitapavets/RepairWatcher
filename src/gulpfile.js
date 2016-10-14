@@ -51,7 +51,7 @@ gulp.task('scriptlibs', function() {
         'resources/assets/libs/animate/animate-css.js',
         'resources/assets/libs/Magnific-Popup/jquery.magnific-popup.min.js',
         'resources/assets/libs/jQuery.equalHeights/jquery.equalheights.min.js',
-        'resources/assets/libs/materialize/js/materialize.min.js'
+        //'resources/assets/libs/materialize/js/materialize.min.js'
     ])
     .pipe(uglify())
     .pipe(concat('libs.js'))

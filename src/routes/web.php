@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('progress/index');
 });
 
 Route::get('admin',                     ['as' => 'admin', 'uses' => 'AdminController@index']);

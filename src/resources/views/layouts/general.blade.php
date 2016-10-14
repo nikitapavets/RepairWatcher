@@ -16,10 +16,10 @@
 
     <!-- Template Basic Images Start -->
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
     <!-- Template Basic Images End -->
 
     <!-- Bootstrap (latest) Grid Styles Only -->
@@ -33,14 +33,13 @@
 
     <!-- Load Fonts CSS Start -->
     <script>
-        loadLocalStorageCSS( "webfonts", "/css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+        loadLocalStorageCSS( "webfonts", "/css/fonts.min.css?ver=1.0.0" );
     </script>
     <!-- Load Fonts CSS End -->
 
     <!-- Load Custom CSS Start -->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <script>loadCSS( "/css/main.min.css?ver=1.0.0", false, "all" );</script>
+    <!-- <script>loadCSS( "/css/main.min.css?ver=1.0.0", false, "all" );</script> -->
+    <link rel="stylesheet" href="/css/header.min.css">
     <!-- Load Custom CSS End -->
 
     <!-- Load Custom CSS Compiled without JS Start -->
@@ -66,7 +65,8 @@
 @yield('content')
 
 <!-- Load Scripts Start -->
-<script>var scr = {"scripts":[
+<script>
+    var scr = {"scripts":[
         {"src" : "/js/main.min.js", "async" : false}
     ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 </script>
