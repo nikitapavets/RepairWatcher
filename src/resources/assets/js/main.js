@@ -42,4 +42,14 @@ $( document ).ready(function(){
         $('.progress--header__top-menu').toggleClass('showme');
     });
 
+    $("#to-contacts").click(function(){
+        $("html, body").animate({scrollTop: $("#contacts").offset().top + 500}, "fast");
+        return false;
+    });
+
+    $("#to-hotouse").click(function(){
+        $("html, body").animate({scrollTop: $("#hotouse").offset().top}, "fast");
+        return false;
+    });
+
 });

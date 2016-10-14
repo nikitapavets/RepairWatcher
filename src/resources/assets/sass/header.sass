@@ -92,7 +92,7 @@
             width: 28px
             height: 28px
   
-  &--how-to-user
+  &--contacts
     background-color: #324A5E
     margin-bottom: 50px
     padding: 50px 25px
@@ -130,6 +130,34 @@
         border-radius: 10px
         color: #324A5E
         line-height: em(36px)
+        outline: none
+        &:hover
+          background-color: #F9B54C
+      
+  &--how-to-use
+    background-color: #fff
+    padding: 50px 25px
+    color: #333
+    .steps
+      .step
+        display: block
+        font-size: em(18px)
+        margin: 45px 0
+        position: relative
+        & > div
+          display: inline-block
+        &-number
+          position: absolute
+          width: 65px
+          height: 65px
+          border-radius: 10em
+          background-color: #FFD05B
+          text-align: center
+          font-size: em(28px)
+          line-height: em(32px)
+        &-descr
+          padding-top: 20px
+          margin-left: 100px
 
   &--section-header
     text-align: center
@@ -145,6 +173,10 @@
       bottom: -25px
       left: 50%
       transform: translateX(-50%)
+    &.blue
+      color: #142741
+      &:before
+        background-color: #142741
 
 
 @import "media"
