@@ -49,7 +49,9 @@
 
                                     <div class="positive--wrap row">
                                         <div class="positive--img col-xs-4">
-                                            <img src="/img/svg/news.svg" alt="">
+                                            <svg class="tags-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href='#news'></use>
+                                            </svg>
                                         </div>
                                         <div class="positive--description col-xs-8 ">
                                             Наш сервис поможет Вам всегда быть в курсе последних новостей о вашей технике! Вы будете знать о ней всё!
@@ -58,7 +60,9 @@
 
                                     <div class="positive--wrap row">
                                         <div class="positive--img col-xs-4">
-                                            <img src="/img/svg/question.svg" alt="">
+                                            <svg class="tags-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href='#question'></use>
+                                            </svg>
                                         </div>
                                         <div class="positive--description col-xs-8">
                                             Возникли вопросы по ремонту? Хотите уточнить детали? Вам будет доступна связь с нами в любой момент времени!
@@ -70,7 +74,9 @@
 
                                     <div class="positive--wrap row">
                                         <div class="positive--img col-xs-4">
-                                            <img src="/img/svg/brain.svg" alt="">
+                                            <svg class="tags-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href='#brain'></use>
+                                            </svg>
                                         </div>
                                         <div class="positive--description col-xs-8">
                                             Думаете, что о вашей технике забыли и она просто лежит на полке? Не волнуйтесь, Вам будет доступен прогресс её ремонта.
@@ -79,7 +85,9 @@
 
                                     <div class="positive--wrap row">
                                         <div class="positive--img col-xs-4">
-                                            <img src="/img/svg/sms.svg" alt="">
+                                            <svg class="tags-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href='#sms'></use>
+                                            </svg>
                                         </div>
                                         <div class="positive--description col-xs-8">
                                             Хотите мгновенно забрать технику, по окончанию ремонта? Sms - уведомления помогут Вам в этом!
@@ -145,7 +153,9 @@
                                             <div class="feed-back">
                                                 <div class="field-wrap">
                                                     <div class="field-img">
-                                                        <img src="/img/svg/skype.svg" alt="">
+                                                        <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <use xlink:href='#skype'></use>
+                                                        </svg>
                                                     </div>
                                                     <div class="field-text">
                                                         anycompteam
@@ -153,7 +163,9 @@
                                                 </div>
                                                 <div class="field-wrap">
                                                     <div class="field-img">
-                                                        <img src="/img/svg/viber.svg" alt="">
+                                                        <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <use xlink:href='#viber'></use>
+                                                        </svg>
                                                     </div>
                                                     <div class="field-text">
                                                         +375(29)717-58-04
@@ -161,7 +173,9 @@
                                                 </div>
                                                 <div class="field-wrap">
                                                     <div class="field-img">
-                                                        <img src="/img/svg/open.svg" alt="">
+                                                        <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <use xlink:href='#open'></use>
+                                                        </svg>
                                                     </div>
                                                     <div class="field-text">
                                                         c6470a@gmail.com
@@ -203,7 +217,9 @@
                                     <div class="feed-back">
                                         <div class="field-wrap">
                                             <div class="field-img">
-                                                <img src="/img/svg/telephone.svg" alt="">
+                                                <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use xlink:href='#telephone'></use>
+                                                </svg>
                                             </div>
                                             <div class="field-input">
                                                 <input type="tel" placeholder="Ваш номер телефона">
@@ -211,7 +227,9 @@
                                         </div>
                                         <div class="field-wrap">
                                             <div class="field-img">
-                                                <img src="/img/svg/envelope.svg" alt="">
+                                                <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use xlink:href='#envelope'></use>
+                                                </svg>
                                             </div>
                                             <div class="field-input">
                                                 <textarea rows="3" placeholder="Ваше сообщение"></textarea>

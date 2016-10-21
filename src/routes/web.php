@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('progress/index');
 });
 
+Route::get('progress',          ['as' => 'progress.progress', 'uses' => 'RepairController@showProgress']);
+
 Route::get('admin',                     ['as' => 'admin', 'uses' => 'AdminController@index']);
 Route::get('admin/login',               ['as' => 'admin.login', 'uses' => 'AdminController@login']);
 Route::get('admin/registration',        ['as' => 'admin.registration', 'uses' => 'AdminController@login']);

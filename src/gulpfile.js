@@ -9,12 +9,15 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify');
     del 		 = require('del'),
     imagemin 	 = require('gulp-imagemin'),
-    pngquant 	 = require('imagemin-pngquant'),
     cache 		 = require('gulp-cache'),
     fileinclude    = require('gulp-file-include'),
     gulpRemoveHtml = require('gulp-remove-html'),
     bourbon        = require('node-bourbon'),
-    ftp            = require('vinyl-ftp');
+    ftp            = require('vinyl-ftp'),
+    font2css       = require('gulp-font2css').default,
+    svgmin         = require('gulp-svgmin'),
+    svgstore       = require('gulp-svgstore'),
+    path           = require('path');
 
 gulp.task('connect-sync', function () {
     connect.server({}, function () {
@@ -26,7 +29,7 @@ gulp.task('connect-sync', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('resources/assets/sass/*.sass')
+    return gulp.src('resources/assets/sass/**/*.sass')
     .pipe(sass({
         includePaths: require('node-bourbon').includePaths
     }).on('error', sass.logError))
@@ -60,20 +63,33 @@ gulp.task('scriptlibs', function() {
 });
 
 gulp.task('watch', ['styles', 'scripts', 'connect-sync'],function () {
-    gulp.watch('resources/assets/sass/*.sass', ['styles']);
+    gulp.watch('resources/assets/sass/**/*.sass', ['styles']);
     gulp.watch('./**/*.php', browserSync.reload);
-    gulp.watch('./resources/assets/js/*.js', ['scripts'], browserSync.reload);
+    gulp.watch('./resources/assets/js/**/*.js', ['scripts'], browserSync.reload);
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src('public/img/**/*')
-    .pipe(cache(imagemin({
-        interlaced: true,
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
-    })))
-    .pipe(gulp.dest('public/img/'));
+    return gulp.src('resources/assets/img/**/*')
+        .pipe(cache(imagemin()))
+        .pipe(gulp.dest('public/img/'));
+});
+
+gulp.task('svgstore', function () {
+    return gulp
+        .src("resources/assets/svg/**/*.svg")
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest("resources/assets/img"));
 });
 
 gulp.task('header', function() {

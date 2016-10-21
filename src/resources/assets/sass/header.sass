@@ -24,6 +24,10 @@
     .positive
       &--wrap
         margin-bottom: 25px
+      &--img
+        .tags-svg
+          width: 100%
+          height: 100%
       &--description
         padding-top: 25px
   &--header
@@ -104,9 +108,12 @@
         &-wrap
           text-align: left
           margin: 15px 0
+          position: relative
         &-img
-          width: 40px
           position: absolute
+          .contacts-svg
+            height: 40px
+            width: 40px
         &-input, &-text
           display: inline-block
           width: 100%
@@ -178,5 +185,5 @@
       &:before
         background-color: #142741
 
-
+@import "pages/repair_progress"
 @import "media"

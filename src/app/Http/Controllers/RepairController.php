@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class RepairController extends Controller
 {
+    public function showProgress(){
+        return view('progress.progress');
+    }
+
     public function edit($id){
         echo $id;
     }
