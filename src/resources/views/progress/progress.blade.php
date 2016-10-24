@@ -354,8 +354,13 @@
         <footer class="main-footer section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6">
+                    <div class="col-md-6 col-sm-12">
+
+                        <div class="map hidden-xs">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18358.434522435848!2d28.675018240802505!3d54.88880384118049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDUzJzE5LjciTiAyOMKwNDEnMzMuMSJF!5e0!3m2!1sru!2sru!4v1477342828151" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
 
                         <div class="contacts">
 
@@ -366,7 +371,7 @@
                                         <use xlink:href='#location'></use>
                                     </svg>
                                     <a href="https://www.google.ru/maps/place/54%C2%B053'19.7%22N+28%C2%B041'33.1%22E/@54.888794,28.6906765,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d54.888794!4d28.692517" target="_blank">
-                                        РБ, г. Лепель,ул. Ленинская, д. 9, офис 1
+                                        РБ, г. Лепель, ул. Ленинская, д. 9, офис 1
                                     </a>
                                 </div>
                             </div>
