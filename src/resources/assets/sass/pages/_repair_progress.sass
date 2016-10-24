@@ -75,7 +75,7 @@
           &--first
             color: #666
           &--second
-            color: $main_dark
+            color: $main_color
       .main-menu
         float: right
         ul
@@ -88,7 +88,7 @@
               line-height: em(89px)
               font-size: em(18px)
               &:hover
-                color: $main-dark
+                color: $main-color
                 text-decoration: underline
           @media only screen and (max-width : 480px)
             display: none
@@ -118,7 +118,7 @@
               display: inline-block
 
   .current-status
-    background-color: $main_light
+    background-color: $main_color
     @media only screen and (max-width : 480px)
       margin-top: 70px
 
@@ -147,7 +147,7 @@
       content: ''
       width: 150px
       height: 3px
-      background-color: $main_dark
+      background-color: $main_color
       position: absolute
       bottom: -30px
       left: 50%
@@ -162,11 +162,11 @@
         &__big
           width: 100px
           height: 100px
-          background-color: $main_light
+          background-color: $main_color
           border-radius: 10em
           position: relative
           margin-bottom: 100px
-          box-shadow: 1px 1px 5px 0 darken($main_light, 20%)
+          box-shadow: 1px 1px 5px 0 darken($main_color, 20%)
           margin-top: -5px
           &:after
             content: ''
@@ -176,7 +176,7 @@
             bottom: -99px
             left: 50%
             transform: translateX(-50%)
-            background-color: $main_light
+            background-color: $main_color
             z-index: 999
           &.last
             &:after
@@ -194,10 +194,10 @@
             width: 40px
             height: 40px
           &.now
-            background-color: lighten($main_light, 25%)
-            color: darken($main_light, 25%)
+            background-color: lighten($main_color, 25%)
+            color: darken($main_color, 25%)
           &.done
-            background-color: darken($main_light, 25%)
+            background-color: darken($main_color, 25%)
 
   .what-we-do
     background-color: #F6F6F6
@@ -209,7 +209,7 @@
       top: 50%
       transform: translateY(-50%)
     header
-      color: $main_dark
+      color: $main_color
       &:after
         background-color: #999
     .our-tech
@@ -219,7 +219,7 @@
 
   .main-footer
     color: #FFF
-    background-color: darken($main_light, 25%)
+    background-color: darken($main_color, 25%)
     .contacts
       &__block
         margin-bottom: 35px
