@@ -9,6 +9,10 @@
       padding: 7px 0
       font-size: em(14px)
       color: #999
+
+      @media only screen and (max-width : 768px)
+        display: none
+
       a
         color: #999
         &:hover, &:active
@@ -35,10 +39,21 @@
           padding-left: 25px
 
     .main-navigation
+      position: relative
+      @media only screen and (max-width : 480px)
+        position: fixed
+        background-color: #fff
+        top: 0px
+        left: 0px
+        width: 100%
+        z-index: 10000
       .main-logo
         padding: 20px 0
         position: relative
         padding-left: 60px
+        display: inline-block
+        @media only screen and (max-width : 480px)
+          padding: 10px 0 10px 50px
         &__svg
           width: 50px
           height: 50px
@@ -46,16 +61,185 @@
           top: 50%
           transform: translateY(-50%)
           left: 0
+          @media only screen and (max-width : 480px)
+            width: 40px
+            height: 40px
         &__title
           display: inline-block
           font-size: em(24px)
           text-transform: uppercase
           line-height: em(40px)
+          @media only screen and (max-width : 480px)
+            font-size: em(20px)
+
           &--first
             color: #666
           &--second
             color: $main_dark
+      .main-menu
+        float: right
+        ul
+          li
+            float: left
+            margin-left: 15px
+            a
+              text-transform: uppercase
+              color: #666
+              line-height: em(89px)
+              font-size: em(18px)
+              &:hover
+                color: $main-dark
+                text-decoration: underline
+          @media only screen and (max-width : 480px)
+            display: none
+            background-color: #fff
+            width: 100%
+            position: absolute
+            top: 70px
+            z-index: 999
+            right: 0
+            li
+              float: none
+              a
+                line-height: em(45px)
+                display: block
+            &.show
+              display: block
+        &__icon
+          svg
+            width: 30px
+            height: 30px
+            position: absolute
+            top: 50%
+            right: 15px
+            transform: translateY(-50%)
+            display: none
+            @media only screen and (max-width : 480px)
+              display: inline-block
 
-  .slider
-    height: 200px
+  .current-status
     background-color: $main_light
+    @media only screen and (max-width : 480px)
+      margin-top: 70px
+
+    &__info
+      color: #fff
+      font-size: em(14px)
+      color: #eee
+      margin-bottom: 15px
+      .value
+        font-size: em(35px)
+        text-transform: uppercase
+        color: #fff
+        line-height: em(16px)
+
+  .section
+    padding: 50px 0
+
+  header.section-header
+    text-align: center
+    font-size: em(32px)
+    text-transform: uppercase
+    color: #666
+    position: relative
+    margin-bottom: 80px
+    &:after
+      content: ''
+      width: 150px
+      height: 3px
+      background-color: $main_dark
+      position: absolute
+      bottom: -30px
+      left: 50%
+      transform: translateX(-50%)
+
+  .progress-bar
+    .step
+      text-align: center
+      .circle
+        &__big, &__small
+          display: inline-block
+        &__big
+          width: 100px
+          height: 100px
+          background-color: $main_light
+          border-radius: 10em
+          position: relative
+          margin-bottom: 100px
+          box-shadow: 1px 1px 5px 0 darken($main_light, 20%)
+          margin-top: -5px
+          &:after
+            content: ''
+            width: 20px
+            height: 100px
+            position: absolute
+            bottom: -99px
+            left: 50%
+            transform: translateX(-50%)
+            background-color: $main_light
+            z-index: 999
+          &.last
+            &:after
+              display: none
+            margin-bottom: 0
+        &__small
+          width: 80px
+          height: 80px
+          margin-top: 10px
+          border-radius: 10em
+          font-size: em(52px)
+          line-height: em(25px)
+          color: #fff
+          svg
+            width: 40px
+            height: 40px
+          &.now
+            background-color: lighten($main_light, 25%)
+            color: darken($main_light, 25%)
+          &.done
+            background-color: darken($main_light, 25%)
+
+  .what-we-do
+    background-color: #F6F6F6
+    svg
+      width: 10px
+      height: 10px
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+    header
+      color: $main_dark
+      &:after
+        background-color: #999
+    .our-tech
+      position: relative
+      padding-left: 25px
+      line-height: em(48px)
+
+  .main-footer
+    color: #FFF
+    background-color: darken($main_light, 25%)
+    .contacts
+      border-left: 1px solid #AAA
+      padding-left: 30px
+      &__block
+        margin-bottom: 40px
+        .title
+          text-transform: uppercase
+          margin-bottom: 20px
+        .value
+          margin-bottom: 5px
+          svg
+            width: 20px
+            height: 20px
+            margin-right: 5px
+          a
+            color: #E7E7E7
+            &:hover
+              text-decoration: underline
+        &:last-child
+          .value
+            margin-bottom: 0
+        
+

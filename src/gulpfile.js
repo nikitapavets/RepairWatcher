@@ -94,14 +94,14 @@ gulp.task('svgstore', function () {
 
 gulp.task('header', function() {
     gulp.src([
-        'resources/views/app.php'
+        'resources/views/layouts/general.blade.php'
     ])
     .pipe(fileinclude({
         prefix: '@@'
     }))
     .pipe(gulpRemoveHtml())
-    .pipe(rename('app.blade.php'))
-    .pipe(gulp.dest('resources/views/'));
+    .pipe(rename('general.blade.php'))
+    .pipe(gulp.dest('resources/views/layouts'));
 });
 
 gulp.task('clearcache', function () {

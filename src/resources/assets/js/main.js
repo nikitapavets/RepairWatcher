@@ -52,4 +52,17 @@ $( document ).ready(function(){
         return false;
     });
 
+
+    /* Repair progress page /progress */
+
+    // top menu
+    $('.main-menu__icon').click(function(){
+       $('.main-menu__list').toggleClass('show');
+    });
+
+    $(document).click(function(event){
+        if ($(event.target).closest(".main-menu__list").length) return;
+        if ($(event.target).closest(".main-menu__icon").length) return;
+        $('.main-menu__list').removeClass('show');
+    });
 });
