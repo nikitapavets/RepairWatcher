@@ -1,12 +1,120 @@
 .admin_layout
+  background-color: #F0F1F6
+  height: 100%
   .main-header
-    padding: 15px 0
-    border-top: 3px solid $main_color
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background-color: #fff
+    border-top: 3px solid $flat_red
+    border-bottom: 1px solid #D2D3D8
     .logo
+      position: relative
+      display: inline-block
+      padding: 15px
       &--label
         font-size: em(24px)
-        .any
-          color: #666
+        color: #666
+        margin-left: 50px
+        line-height: em(25px)
         .comp
-          color: $main_color
+          color: $flat_red
+      &--svg
+        position: absolute
+        top: 15px
+        left: 15px
+        svg
+          width: 40px
+          height: 40px
+    .top-menu
+      float: right
+      li
+        float: left
+        a
+          display: block
+          padding: 20px 20px 17px
+          &:hover
+            background-color: #F4F8FB
+          svg
+            width: 25px
+            height: 25px
+          &.profile
+            padding: 0
+            background-color: #F4F8FB
+            color: #666
+            padding: 14px 20px 13px
+            text-transform: uppercase
+            font-size: em(14px)
+            img
+              width: 40px
+              height: 40px
+              border-radius: 10em
+              margin-right: 10px
+  .dashboard_wrap
+    height: 100%
+    .left-menu
+      position: fixed
+      left: 0px
+      top: 72px
+      background-color: #E7E8ED
+      height: 100%
+      width: 300px
+      border-right: 1px solid #D2D3D8
+      li
+        &:hover
+          background-color: #E0E1E6
+        a
+          position: relative
+          color: #666
+          text-transform: uppercase
+          display: block
+          border-bottom: 1px solid #D2D3D8
+          font-size: em(14px)
+          .item-ico
+            display: inline-block
+            border-right: 1px solid #D2D3D8
+            width: 60px
+            height: 60px
+            text-align: center
+            position: relative
+            svg
+              width: 30px
+              height: 30px
+              text-align: center
+              margin-top: 15px
+          .item-text
+            display: inline-block
+            position: absolute
+            top: 50%
+            transform: translate3d(15px, -50%, 0)
 
+        &:nth-child(2n+1)
+          a
+            border-left: 3px solid $flat_red
+        &:nth-child(2n)
+          a
+            border-left: 3px solid $flat_blue
+        &:nth-child(3n+3)
+          a
+            border-left: 3px solid $flat_green
+
+  .admin_content
+    background-color: #fff
+    border-radius: 5px
+    &--wrap
+      padding: 85px 15px 15px 315px
+    &--header
+      text-align: center
+      padding: 15px
+      background-color: $flat_blue
+      border: 1px solid #417FB8
+      color: #fff
+      text-transform: uppercase
+      border-radius: 5px 5px 0 0
+    &--content
+      padding: 15px
+      border: 1px solid #D2D3D8
+      border-radius: 0 0 5px 5px
+      border-top: none
+      
