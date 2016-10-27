@@ -35,7 +35,7 @@
             $status_color = 'blue-text';
             $status = '';
             switch($repair->status){
-                case 'repair':
+                case '_repair':
                     $status = 'Ремонт';
                     $status_color = 'teal-text';
                     break;

@@ -36,7 +36,7 @@
 
     <div class="card">
 
-        {{ Form::open(array('url' => 'repair')) }}
+        {{ Form::open(array('url' => '_repair')) }}
 
         <div class="row">
 

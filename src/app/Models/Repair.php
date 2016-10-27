@@ -112,13 +112,13 @@ class Repair extends Model
     public function scopePaid($query){
 
         $query->where('maintenance_type', '=', 'paid')
-            ->where('status', '=', 'repair');
+            ->where('status', '=', '_repair');
     }
 
     public function scopeFree($query){
 
         $query->where('maintenance_type', '=', 'free')
-            ->where('status', '=', 'repair');
+            ->where('status', '=', '_repair');
     }
 
     public function scopeComplete($query){

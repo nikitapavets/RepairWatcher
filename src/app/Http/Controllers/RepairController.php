@@ -19,4 +19,5 @@ class RepairController extends Controller
     public function add(){
         return view('admin.repair.add');
     }
+
 }

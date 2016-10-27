@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="profile" href="#">
+                            <a class="profile" href="/admin/logout">
                                 <img src="/img/team/nikita.png" alt="">
                                 <span>Никита Павец</span>
                             </a>
@@ -47,7 +47,7 @@
                 <nav class="left-menu">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="/admin/repair/add">
                                 <div class="item-ico">
                                     <svg class="top-menu__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use xlink:href='#plus_solid'></use>

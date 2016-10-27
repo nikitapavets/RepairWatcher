@@ -28,7 +28,7 @@ class CreateRepairsTable extends Migration
             $table->string('token')->nullable();
             $table->string('adopted_in')->nullable();
             $table->enum('maintenance_type', array('paid', 'free'))->default('paid');
-            $table->enum('status', array('repair', 'complete'))->default('repair');
+            $table->enum('status', array('_repair', 'complete'))->default('_repair');
             $table->timestamps();
         });
     }
