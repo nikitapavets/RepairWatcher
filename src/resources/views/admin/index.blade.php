@@ -2,6 +2,6 @@
 
 @section('admin_content')
 
-
+    Index
 
 @stop

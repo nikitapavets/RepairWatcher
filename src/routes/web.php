@@ -17,9 +17,9 @@ Route::group(['prefix' => 'admin'], function(){
 	Route::group(['middleware' => 'admin'], function(){
 
 		Route::get('/',['as' => 'admin', 'uses' => 'AdminController@index']);
-		Route::post('/repair/save', ['as' => 'admin.repair.save', 'uses' => 'AdminController@save']);
 		Route::get('/repair/edit/{id}',['as' => 'admin.repair.edit.{id}', 'uses' => 'RepairController@edit']);
-		Route::get('/repair/add',['as' => 'admin.repair.add', 'uses' => 'RepairController@add']);
+		Route::get('/repair/add_tech',['as' => 'admin.repair.add_tech', 'uses' => 'RepairController@addTech']);
+		Route::post('/repair/save_tech', ['as' => 'admin.repair.save_tech', 'uses' => 'RepairController@saveTech']);
 
 	});
 

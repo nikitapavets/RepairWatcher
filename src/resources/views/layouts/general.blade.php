@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
 
-    <title>Ремонт</title>
+    <title>{{$page['title'] ?? "AnyComp"}}</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 
