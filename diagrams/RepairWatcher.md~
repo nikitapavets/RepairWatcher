@@ -4587,10 +4587,7 @@
 				    type       	"Normal")
 				(object State "$UNNAMED$28"
 				    quid       	"580963B70264"
-				    type       	"EndState")
-				(object State "Notice was shown"
-				    quid       	"58126AB50349"
-				    type       	"Normal"))
+				    type       	"EndState"))
 			    partitions 	(list Partitions)
 			    objects    	(list Objects)
 			    transitions 	(list transition_list
@@ -4709,28 +4706,7 @@
 				    Event      	(object Event "Press button"
 					quid       	"5812652601AC")
 				    sendEvent  	(object sendEvent
-					quid       	"5812652601AE"))
-				(object State_Transition
-				    quid       	"58126AC3009C"
-				    label      	""
-				    supplier   	"Use Case View::Statechart Diagram::Connect::State/Activity Model3::Notice was shown"
-				    supplier_quidu 	"58126AB50349"
-				    client     	
-|Use Case View::Statechart Diagram::Connect::State/Activity Model3::"Send" button was pressed
-				    
-				    client_quidu 	"5809634B0305"
-				    Event      	(object Event "Send form"
-					quid       	"58126AC3009D")
-				    sendEvent  	(object sendEvent
-					quid       	"58126AC3009F"))
-				(object State_Transition
-				    quid       	"58126AC50262"
-				    supplier   	"$UNNAMED$28"
-				    supplier_quidu 	"580963B70264"
-				    client     	"Use Case View::Statechart Diagram::Connect::State/Activity Model3::Notice was shown"
-				    client_quidu 	"58126AB50349"
-				    sendEvent  	(object sendEvent
-					quid       	"58126AC50265")))
+					quid       	"5812652601AE")))
 			    objectflows 	(list objectflow_list)
 			    statediagrams 	(list StateDiagrams
 				(object State_Diagram "Connect"
@@ -4888,12 +4864,23 @@
 					    height     	134
 					    autoResize 	TRUE)
 					(object StateView "EndState" "$UNNAMED$28" @196
-					    location   	(2205, 623)
+					    location   	(1355, 630)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580963B70264"
 					    autoResize 	TRUE)
 					(object TransView "" @197
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5812651C0232"
+					    client     	@195
+					    supplier   	@196
+					    vertices   	(list Points
+						(903, 627)
+						(1313, 629))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @198
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -4904,8 +4891,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @198
-						Parent_View 	@197
+					    label      	(object SegLabel @199
+						Parent_View 	@198
 						location   	(588, 429)
 						font       	(object Font
 						    size       	10
@@ -4935,7 +4922,7 @@
 						(716, 284))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @199
+					(object TransView "" @200
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -4946,8 +4933,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @200
-						Parent_View 	@199
+					    label      	(object SegLabel @201
+						Parent_View 	@200
 						location   	(1307, 481)
 						font       	(object Font
 						    size       	10
@@ -4975,87 +4962,6 @@
 					    vertices   	(list Points
 						(1540, 287)
 						(883, 559))
-					    line_style 	0
-					    x_offset   	FALSE)
-					(object StateView "Normal" "Notice was shown" @201
-					    location   	(1722, 622)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						charSet    	204
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    label      	(object ItemLabel
-						Parent_View 	@201
-						location   	(1722, 606)
-						fill_color 	13434879
-						anchor_loc 	1
-						nlines     	2
-						max_width  	296
-						justify    	0
-						label      	"Notice was shown")
-					    icon_style 	"Icon"
-					    line_color 	3342489
-					    fill_color 	13434879
-					    quidu      	"58126AB50349"
-					    width      	393
-					    height     	144
-					    autoResize 	TRUE)
-					(object TransView "" @202
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						charSet    	204
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    label      	(object SegLabel @203
-						Parent_View 	@202
-						location   	(1215, 579)
-						font       	(object Font
-						    size       	10
-						    face       	"Arial"
-						    charSet    	204
-						    bold       	FALSE
-						    italics    	FALSE
-						    underline  	FALSE
-						    strike     	FALSE
-						    color      	0
-						    default_color 	TRUE)
-						anchor_loc 	1
-						nlines     	1
-						max_width  	215
-						justify    	0
-						label      	"Send form"
-						pctDist    	0.500000
-						height     	45
-						orientation 	0)
-					    stereotype 	TRUE
-					    line_color 	3342489
-					    quidu      	"58126AC3009C"
-					    client     	@195
-					    supplier   	@201
-					    vertices   	(list Points
-						(903, 625)
-						(1526, 622))
-					    line_style 	0
-					    x_offset   	FALSE)
-					(object TransView "" @204
-					    stereotype 	TRUE
-					    line_color 	3342489
-					    quidu      	"58126AC50262"
-					    client     	@201
-					    supplier   	@196
-					    vertices   	(list Points
-						(1918, 622)
-						(2163, 622))
 					    line_style 	0
 					    x_offset   	FALSE)))))
 			logical_presentations 	(list unit_reference_list))
@@ -5221,13 +5127,13 @@
 				    origin_x   	232
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object StateView "StartState" "$UNNAMED$29" @205
+					(object StateView "StartState" "$UNNAMED$29" @202
 					    location   	(316, 222)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580964EC03E5"
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Form was flushed" @206
+					(object StateView "Normal" "Form was flushed" @203
 					    location   	(784, 222)
 					    font       	(object Font
 						size       	10
@@ -5240,7 +5146,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@206
+						Parent_View 	@203
 						location   	(784, 211)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5254,7 +5160,7 @@
 					    quidu      	"580964EF01F6"
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Form was filled in" @207
+					(object StateView "Normal" "Form was filled in" @204
 					    location   	(1363, 217)
 					    font       	(object Font
 						size       	10
@@ -5267,7 +5173,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@207
+						Parent_View 	@204
 						location   	(1363, 206)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5281,7 +5187,7 @@
 					    quidu      	"580964F102C2"
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Button was presed" @208
+					(object StateView "Normal" "Button was presed" @205
 					    location   	(788, 564)
 					    font       	(object Font
 						size       	10
@@ -5294,7 +5200,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@208
+						Parent_View 	@205
 						location   	(788, 553)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5308,7 +5214,7 @@
 					    quidu      	"580964F40258"
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Form was validated" @209
+					(object StateView "Normal" "Form was validated" @206
 					    location   	(1359, 564)
 					    font       	(object Font
 						size       	10
@@ -5321,7 +5227,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@209
+						Parent_View 	@206
 						location   	(1359, 553)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5335,18 +5241,18 @@
 					    quidu      	"580964F601B3"
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @210
+					(object TransView "" @207
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580964F901E1"
-					    client     	@205
-					    supplier   	@206
+					    client     	@202
+					    supplier   	@203
 					    vertices   	(list Points
 						(346, 222)
 						(634, 222))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @211
+					(object TransView "" @208
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5357,8 +5263,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @212
-						Parent_View 	@211
+					    label      	(object SegLabel @209
+						Parent_View 	@208
 						location   	(1074, 175)
 						font       	(object Font
 						    size       	10
@@ -5381,14 +5287,14 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809650000EC"
-					    client     	@206
-					    supplier   	@207
+					    client     	@203
+					    supplier   	@204
 					    vertices   	(list Points
 						(934, 220)
 						(1213, 218))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @213
+					(object TransView "" @210
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5399,8 +5305,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @214
-						Parent_View 	@213
+					    label      	(object SegLabel @211
+						Parent_View 	@210
 						location   	(1073, 520)
 						font       	(object Font
 						    size       	10
@@ -5423,14 +5329,14 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096502008C"
-					    client     	@208
-					    supplier   	@209
+					    client     	@205
+					    supplier   	@206
 					    vertices   	(list Points
 						(938, 564)
 						(1209, 564))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "Normal" "Dashboard page was viewed" @215
+					(object StateView "Normal" "Dashboard page was viewed" @212
 					    location   	(2039, 570)
 					    font       	(object Font
 						size       	10
@@ -5443,7 +5349,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@215
+						Parent_View 	@212
 						location   	(2039, 559)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5458,24 +5364,24 @@
 					    width      	458
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$31" @216
+					(object StateView "EndState" "$UNNAMED$31" @213
 					    location   	(2638, 570)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580967FB0145"
 					    autoResize 	TRUE)
-					(object TransView "" @217
+					(object TransView "" @214
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580968070039"
-					    client     	@215
-					    supplier   	@216
+					    client     	@212
+					    supplier   	@213
 					    vertices   	(list Points
 						(2268, 570)
 						(2596, 570))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @218
+					(object TransView "" @215
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5486,8 +5392,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @219
-						Parent_View 	@218
+					    label      	(object SegLabel @216
+						Parent_View 	@215
 						location   	(948, 366)
 						font       	(object Font
 						    size       	10
@@ -5510,14 +5416,14 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"581265AE0345"
-					    client     	@207
-					    supplier   	@208
+					    client     	@204
+					    supplier   	@205
 					    vertices   	(list Points
 						(1251, 283)
 						(899, 496))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @220
+					(object TransView "" @217
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5528,8 +5434,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @221
-						Parent_View 	@220
+					    label      	(object SegLabel @218
+						Parent_View 	@217
 						location   	(1659, 522)
 						font       	(object Font
 						    size       	10
@@ -5552,8 +5458,8 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"581265E80139"
-					    client     	@209
-					    supplier   	@215
+					    client     	@206
+					    supplier   	@212
 					    vertices   	(list Points
 						(1509, 565)
 						(1810, 567))
@@ -5656,13 +5562,13 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object StateView "StartState" "$UNNAMED$32" @222
+					(object StateView "StartState" "$UNNAMED$32" @219
 					    location   	(222, 159)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"5809695C003A"
 					    autoResize 	TRUE)
-					(object StateView "Normal" "CRUD group button was presses" @223
+					(object StateView "Normal" "CRUD group button was presses" @220
 					    location   	(772, 158)
 					    font       	(object Font
 						size       	10
@@ -5675,7 +5581,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@223
+						Parent_View 	@220
 						location   	(772, 147)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5690,18 +5596,18 @@
 					    width      	448
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @224
+					(object TransView "" @221
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096977011E"
-					    client     	@222
-					    supplier   	@223
+					    client     	@219
+					    supplier   	@220
 					    vertices   	(list Points
 						(252, 158)
 						(548, 158))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "Normal" "CRUD operation was sended" @225
+					(object StateView "Normal" "CRUD operation was sended" @222
 					    location   	(1595, 162)
 					    font       	(object Font
 						size       	10
@@ -5714,7 +5620,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@225
+						Parent_View 	@222
 						location   	(1595, 151)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5729,7 +5635,7 @@
 					    width      	428
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @226
+					(object TransView "" @223
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5740,8 +5646,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @227
-						Parent_View 	@226
+					    label      	(object SegLabel @224
+						Parent_View 	@223
 						location   	(1189, 116)
 						font       	(object Font
 						    size       	10
@@ -5764,14 +5670,14 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580969BA02BA"
-					    client     	@223
-					    supplier   	@225
+					    client     	@220
+					    supplier   	@222
 					    vertices   	(list Points
 						(996, 159)
 						(1381, 160))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "Normal" "Manager information was updated" @228
+					(object StateView "Normal" "Manager information was updated" @225
 					    location   	(772, 508)
 					    font       	(object Font
 						size       	10
@@ -5784,7 +5690,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@228
+						Parent_View 	@225
 						location   	(772, 497)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5799,7 +5705,7 @@
 					    width      	496
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @229
+					(object TransView "" @226
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5810,8 +5716,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @230
-						Parent_View 	@229
+					    label      	(object SegLabel @227
+						Parent_View 	@226
 						location   	(575, 336)
 						font       	(object Font
 						    size       	10
@@ -5834,14 +5740,14 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096A12011A"
-					    client     	@223
-					    supplier   	@228
+					    client     	@220
+					    supplier   	@225
 					    vertices   	(list Points
 						(772, 225)
 						(772, 441))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "Normal" "CRUD operation was sended" @231
+					(object StateView "Normal" "CRUD operation was sended" @228
 					    location   	(1595, 162)
 					    font       	(object Font
 						size       	10
@@ -5854,7 +5760,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@231
+						Parent_View 	@228
 						location   	(1595, 151)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5869,7 +5775,7 @@
 					    width      	428
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "Normal" "CRUD operation was executed" @232
+					(object StateView "Normal" "CRUD operation was executed" @229
 					    location   	(1596, 511)
 					    font       	(object Font
 						size       	10
@@ -5882,7 +5788,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@232
+						Parent_View 	@229
 						location   	(1596, 500)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -5897,7 +5803,7 @@
 					    width      	448
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @233
+					(object TransView "" @230
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -5908,8 +5814,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @234
-						Parent_View 	@233
+					    label      	(object SegLabel @231
+						Parent_View 	@230
 						location   	(1797, 342)
 						font       	(object Font
 						    size       	10
@@ -5932,36 +5838,36 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096A410021"
-					    client     	@231
-					    supplier   	@232
+					    client     	@228
+					    supplier   	@229
 					    vertices   	(list Points
 						(1595, 229)
 						(1595, 443))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "EndState" "$UNNAMED$33" @235
+					(object StateView "EndState" "$UNNAMED$33" @232
 					    location   	(1197, 881)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"58096A5C0318"
 					    autoResize 	TRUE)
-					(object TransView "" @236
+					(object TransView "" @233
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096A6202C7"
-					    client     	@228
-					    supplier   	@235
+					    client     	@225
+					    supplier   	@232
 					    vertices   	(list Points
 						(848, 574)
 						(1155, 844))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @237
+					(object TransView "" @234
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58096A6503B5"
-					    client     	@232
-					    supplier   	@235
+					    client     	@229
+					    supplier   	@232
 					    vertices   	(list Points
 						(1523, 578)
 						(1242, 839))
@@ -5998,10 +5904,7 @@
 				    type       	"Normal")
 				(object State "$UNNAMED$35"
 				    quid       	"580967330392"
-				    type       	"EndState")
-				(object State "Notice was shown"
-				    quid       	"58126A27023C"
-				    type       	"Normal"))
+				    type       	"EndState"))
 			    partitions 	(list Partitions)
 			    objects    	(list Objects)
 			    transitions 	(list transition_list
@@ -6139,28 +6042,7 @@
 				    Event      	(object Event "Flush form"
 					quid       	"58126625035D")
 				    sendEvent  	(object sendEvent
-					quid       	"58126625035F"))
-				(object State_Transition
-				    quid       	"58126A5F015F"
-				    label      	""
-				    supplier   	"Use Case View::Statechart Diagram::SendSms::State/Activity Model5::Notice was shown"
-				    supplier_quidu 	"58126A27023C"
-				    client     	
-|Use Case View::Statechart Diagram::SendSms::State/Activity Model5::"Send" button was presed
-				    
-				    client_quidu 	"5809665600B8"
-				    Event      	(object Event "Send form"
-					quid       	"58126A5F0160")
-				    sendEvent  	(object sendEvent
-					quid       	"58126A5F0162"))
-				(object State_Transition
-				    quid       	"58126A7C0277"
-				    supplier   	"$UNNAMED$35"
-				    supplier_quidu 	"580967330392"
-				    client     	"Use Case View::Statechart Diagram::SendSms::State/Activity Model5::Notice was shown"
-				    client_quidu 	"58126A27023C"
-				    sendEvent  	(object sendEvent
-					quid       	"58126A7C027A")))
+					quid       	"58126625035F")))
 			    objectflows 	(list objectflow_list)
 			    statediagrams 	(list StateDiagrams
 				(object State_Diagram "SendSms"
@@ -6172,13 +6054,13 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object StateView "StartState" "$UNNAMED$34" @238
+					(object StateView "StartState" "$UNNAMED$34" @235
 					    location   	(259, 225)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580966180218"
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Message form was flushed" @239
+					(object StateView "Normal" "Message form was flushed" @236
 					    location   	(709, 224)
 					    font       	(object Font
 						size       	10
@@ -6191,7 +6073,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@239
+						Parent_View 	@236
 						location   	(709, 213)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6206,7 +6088,7 @@
 					    width      	356
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "Normal" "Message form was filled in" @240
+					(object StateView "Normal" "Message form was filled in" @237
 					    location   	(1378, 220)
 					    font       	(object Font
 						size       	10
@@ -6219,7 +6101,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@240
+						Parent_View 	@237
 						location   	(1378, 209)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6234,18 +6116,18 @@
 					    width      	356
 					    height     	134
 					    autoResize 	TRUE)
-					(object TransView "" @241
+					(object TransView "" @238
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580966380122"
-					    client     	@238
-					    supplier   	@239
+					    client     	@235
+					    supplier   	@236
 					    vertices   	(list Points
 						(289, 224)
 						(531, 224))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @242
+					(object TransView "" @239
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -6256,8 +6138,8 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @243
-						Parent_View 	@242
+					    label      	(object SegLabel @240
+						Parent_View 	@239
 						location   	(1044, 177)
 						font       	(object Font
 						    size       	10
@@ -6280,15 +6162,15 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809663B01A1"
-					    client     	@239
-					    supplier   	@240
+					    client     	@236
+					    supplier   	@237
 					    vertices   	(list Points
 						(887, 222)
 						(1200, 221))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "Normal" "\"Send\" button was presed" @244
-					    location   	(709, 598)
+					(object StateView "Normal" "\"Send\" button was presed" @241
+					    location   	(722, 598)
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -6300,8 +6182,8 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@244
-						location   	(709, 587)
+						Parent_View 	@241
+						location   	(722, 587)
 						fill_color 	13434879
 						anchor_loc 	1
 						nlines     	2
@@ -6317,13 +6199,13 @@
 					    width      	354
 					    height     	134
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$35" @245
-					    location   	(1886, 598)
+					(object StateView "EndState" "$UNNAMED$35" @242
+					    location   	(1373, 595)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580967330392"
 					    autoResize 	TRUE)
-					(object TransView "" @246
+					(object TransView "" @243
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -6334,9 +6216,9 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @247
-						Parent_View 	@246
-						location   	(935, 368)
+					    label      	(object SegLabel @244
+						Parent_View 	@243
+						location   	(941, 367)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -6358,14 +6240,25 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58126605014F"
-					    client     	@240
-					    supplier   	@244
+					    client     	@237
+					    supplier   	@241
 					    vertices   	(list Points
-						(1259, 286)
-						(827, 531))
+						(1261, 286)
+						(838, 531))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @248
+					(object TransView "" @245
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"58126620012C"
+					    client     	@241
+					    supplier   	@242
+					    vertices   	(list Points
+						(899, 597)
+						(1331, 595))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @246
 					    font       	(object Font
 						size       	10
 						face       	"Arial"
@@ -6376,9 +6269,9 @@
 						strike     	FALSE
 						color      	0
 						default_color 	TRUE)
-					    label      	(object SegLabel @249
-						Parent_View 	@248
-						location   	(543, 411)
+					    label      	(object SegLabel @247
+						Parent_View 	@246
+						location   	(548, 416)
 						font       	(object Font
 						    size       	10
 						    face       	"Arial"
@@ -6400,92 +6293,11 @@
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58126625035C"
-					    client     	@244
-					    supplier   	@239
+					    client     	@241
+					    supplier   	@236
 					    vertices   	(list Points
-						(709, 531)
-						(709, 291))
-					    line_style 	0
-					    x_offset   	FALSE)
-					(object StateView "Normal" "Notice was shown" @250
-					    location   	(1390, 597)
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						charSet    	204
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    label      	(object ItemLabel
-						Parent_View 	@250
-						location   	(1390, 581)
-						fill_color 	13434879
-						anchor_loc 	1
-						nlines     	2
-						max_width  	240
-						justify    	0
-						label      	"Notice was shown")
-					    icon_style 	"Icon"
-					    line_color 	3342489
-					    fill_color 	13434879
-					    quidu      	"58126A27023C"
-					    width      	336
-					    height     	144
-					    autoResize 	TRUE)
-					(object TransView "" @251
-					    font       	(object Font
-						size       	10
-						face       	"Arial"
-						charSet    	204
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    label      	(object SegLabel @252
-						Parent_View 	@251
-						location   	(1054, 553)
-						font       	(object Font
-						    size       	10
-						    face       	"Arial"
-						    charSet    	204
-						    bold       	FALSE
-						    italics    	FALSE
-						    underline  	FALSE
-						    strike     	FALSE
-						    color      	0
-						    default_color 	TRUE)
-						anchor_loc 	1
-						nlines     	1
-						max_width  	215
-						justify    	0
-						label      	"Send form"
-						pctDist    	0.500000
-						height     	45
-						orientation 	0)
-					    stereotype 	TRUE
-					    line_color 	3342489
-					    quidu      	"58126A5F015F"
-					    client     	@244
-					    supplier   	@250
-					    vertices   	(list Points
-						(886, 597)
-						(1222, 597))
-					    line_style 	0
-					    x_offset   	FALSE)
-					(object TransView "" @253
-					    stereotype 	TRUE
-					    line_color 	3342489
-					    quidu      	"58126A7C0277"
-					    client     	@250
-					    supplier   	@245
-					    vertices   	(list Points
-						(1558, 597)
-						(1844, 597))
+						(719, 530)
+						(711, 291))
 					    line_style 	0
 					    x_offset   	FALSE)))))
 			logical_presentations 	(list unit_reference_list)))
@@ -6571,19 +6383,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @254
+					(object Swimlane "User" @248
 					    line_color 	3342489
 					    quidu      	"58096FEE02A2"
 					    width      	706)
-					(object StateView "StartState" "$UNNAMED$36" @255
-					    Parent_View 	@254
+					(object StateView "StartState" "$UNNAMED$36" @249
+					    Parent_View 	@248
 					    location   	(341, 94)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580970E0023F"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Fing equipment" @256
-					    Parent_View 	@254
+					(object ActivityStateView "Fing equipment" @250
+					    Parent_View 	@248
 					    location   	(343, 409)
 					    font       	(object Font
 						size       	10
@@ -6596,7 +6408,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@256
+						Parent_View 	@250
 						location   	(343, 412)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6611,19 +6423,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @257
+					(object TransView "" @251
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580970F200C8"
-					    client     	@255
-					    supplier   	@256
+					    client     	@249
+					    supplier   	@250
 					    vertices   	(list Points
 						(341, 124)
 						(342, 355))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Change status" @258
-					    Parent_View 	@254
+					(object ActivityStateView "Change status" @252
+					    Parent_View 	@248
 					    location   	(340, 750)
 					    font       	(object Font
 						size       	10
@@ -6636,7 +6448,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@258
+						Parent_View 	@252
 						location   	(340, 753)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6651,31 +6463,31 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @259
+					(object TransView "" @253
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580971AD02CE"
-					    client     	@256
-					    supplier   	@258
+					    client     	@250
+					    supplier   	@252
 					    vertices   	(list Points
 						(342, 461)
 						(340, 697))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "EndState" "$UNNAMED$37" @260
-					    Parent_View 	@254
+					(object StateView "EndState" "$UNNAMED$37" @254
+					    Parent_View 	@248
 					    location   	(347, 1109)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"5809720501A7"
 					    autoResize 	TRUE)
-					(object Swimlane "Server" @261
+					(object Swimlane "Server" @255
 					    location   	(706, 0)
 					    line_color 	3342489
 					    quidu      	"5809717603C0"
 					    width      	648)
-					(object ActivityStateView "Save changes in database" @262
-					    Parent_View 	@261
+					(object ActivityStateView "Save changes in database" @256
+					    Parent_View 	@255
 					    location   	(1039, 750)
 					    font       	(object Font
 						size       	10
@@ -6688,7 +6500,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@262
+						Parent_View 	@256
 						location   	(1039, 753)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6703,27 +6515,27 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @263
+					(object TransView "" @257
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580971C2035C"
-					    client     	@258
-					    supplier   	@262
+					    client     	@252
+					    supplier   	@256
 					    vertices   	(list Points
 						(511, 750)
 						(868, 750))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @264
+					(object Swimlane "" @258
 					    location   	(1354, 0)
 					    line_color 	3342489
 					    width      	450)
-					(object TransView "" @265
+					(object TransView "" @259
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809720D0154"
-					    client     	@262
-					    supplier   	@260
+					    client     	@256
+					    supplier   	@254
 					    vertices   	(list Points
 						(1038, 802)
 						(1038, 1109)
@@ -6822,19 +6634,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @266
+					(object Swimlane "User" @260
 					    line_color 	3342489
 					    quidu      	"5809726702D3"
 					    width      	700)
-					(object StateView "StartState" "$UNNAMED$38" @267
-					    Parent_View 	@266
+					(object StateView "StartState" "$UNNAMED$38" @261
+					    Parent_View 	@260
 					    location   	(339, 150)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580972880332"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Fill in hash code form" @268
-					    Parent_View 	@266
+					(object ActivityStateView "Fill in hash code form" @262
+					    Parent_View 	@260
 					    location   	(337, 439)
 					    font       	(object Font
 						size       	10
@@ -6847,7 +6659,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@268
+						Parent_View 	@262
 						location   	(337, 442)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6862,19 +6674,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @269
+					(object TransView "" @263
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580972AC029D"
-					    client     	@267
-					    supplier   	@268
+					    client     	@261
+					    supplier   	@262
 					    vertices   	(list Points
 						(338, 179)
 						(337, 385))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Push \"enter\" button" @270
-					    Parent_View 	@266
+					(object ActivityStateView "Push \"enter\" button" @264
+					    Parent_View 	@260
 					    location   	(338, 776)
 					    font       	(object Font
 						size       	10
@@ -6887,7 +6699,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@270
+						Parent_View 	@264
 						location   	(338, 779)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6904,19 +6716,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @271
+					(object TransView "" @265
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580972D50178"
-					    client     	@268
-					    supplier   	@270
+					    client     	@262
+					    supplier   	@264
 					    vertices   	(list Points
 						(337, 491)
 						(337, 723))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "View progress status page" @272
-					    Parent_View 	@266
+					(object ActivityStateView "View progress status page" @266
+					    Parent_View 	@260
 					    location   	(337, 1174)
 					    font       	(object Font
 						size       	10
@@ -6929,7 +6741,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@272
+						Parent_View 	@266
 						location   	(337, 1177)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6944,31 +6756,31 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$39" @273
-					    Parent_View 	@266
+					(object StateView "EndState" "$UNNAMED$39" @267
+					    Parent_View 	@260
 					    location   	(339, 1542)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"58097343004C"
 					    autoResize 	TRUE)
-					(object TransView "" @274
+					(object TransView "" @268
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809734601A7"
-					    client     	@272
-					    supplier   	@273
+					    client     	@266
+					    supplier   	@267
 					    vertices   	(list Points
 						(337, 1227)
 						(338, 1499))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "Server" @275
+					(object Swimlane "Server" @269
 					    location   	(700, 0)
 					    line_color 	3342489
 					    quidu      	"5809727B01C8"
 					    width      	710)
-					(object ActivityStateView "Validate hash" @276
-					    Parent_View 	@275
+					(object ActivityStateView "Validate hash" @270
+					    Parent_View 	@269
 					    location   	(1074, 781)
 					    font       	(object Font
 						size       	10
@@ -6981,7 +6793,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@276
+						Parent_View 	@270
 						location   	(1074, 784)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -6996,30 +6808,30 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @277
+					(object TransView "" @271
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580972E80066"
-					    client     	@270
-					    supplier   	@276
+					    client     	@264
+					    supplier   	@270
 					    vertices   	(list Points
 						(509, 777)
 						(902, 779))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @278
+					(object TransView "" @272
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809731B0298"
-					    client     	@276
-					    supplier   	@272
+					    client     	@270
+					    supplier   	@266
 					    vertices   	(list Points
 						(1073, 834)
 						(1072, 1172)
 						(508, 1173))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @279
+					(object Swimlane "" @273
 					    location   	(1410, 0)
 					    line_color 	3342489
 					    width      	450)))))
@@ -7115,19 +6927,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @280
+					(object Swimlane "User" @274
 					    line_color 	3342489
 					    quidu      	"58097385011F"
 					    width      	654)
-					(object StateView "StartState" "$UNNAMED$40" @281
-					    Parent_View 	@280
+					(object StateView "StartState" "$UNNAMED$40" @275
+					    Parent_View 	@274
 					    location   	(303, 159)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580973A10309"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Fill in feedback form" @282
-					    Parent_View 	@280
+					(object ActivityStateView "Fill in feedback form" @276
+					    Parent_View 	@274
 					    location   	(303, 422)
 					    font       	(object Font
 						size       	10
@@ -7140,7 +6952,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@282
+						Parent_View 	@276
 						location   	(303, 425)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7155,19 +6967,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @283
+					(object TransView "" @277
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580973CE01F2"
-					    client     	@281
-					    supplier   	@282
+					    client     	@275
+					    supplier   	@276
 					    vertices   	(list Points
 						(303, 189)
 						(303, 369))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Push \"send\" button" @284
-					    Parent_View 	@280
+					(object ActivityStateView "Push \"send\" button" @278
+					    Parent_View 	@274
 					    location   	(302, 741)
 					    font       	(object Font
 						size       	10
@@ -7180,7 +6992,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@284
+						Parent_View 	@278
 						location   	(302, 744)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7197,19 +7009,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @285
+					(object TransView "" @279
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580973EE0042"
-					    client     	@282
-					    supplier   	@284
+					    client     	@276
+					    supplier   	@278
 					    vertices   	(list Points
 						(302, 474)
 						(302, 688))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Flush feedback form" @286
-					    Parent_View 	@280
+					(object ActivityStateView "Flush feedback form" @280
+					    Parent_View 	@274
 					    location   	(293, 1087)
 					    font       	(object Font
 						size       	10
@@ -7222,7 +7034,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@286
+						Parent_View 	@280
 						location   	(293, 1090)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7238,20 +7050,20 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$41" @287
-					    Parent_View 	@280
+					(object StateView "EndState" "$UNNAMED$41" @281
+					    Parent_View 	@274
 					    location   	(296, 1389)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580974E70203"
 					    autoResize 	TRUE)
-					(object Swimlane "Server" @288
+					(object Swimlane "Server" @282
 					    location   	(654, 0)
 					    line_color 	3342489
 					    quidu      	"58097395018C"
 					    width      	672)
-					(object ActivityStateView "Save message to database" @289
-					    Parent_View 	@288
+					(object ActivityStateView "Save message to database" @283
+					    Parent_View 	@282
 					    location   	(1010, 745)
 					    font       	(object Font
 						size       	10
@@ -7264,7 +7076,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@289
+						Parent_View 	@283
 						location   	(1010, 748)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7279,39 +7091,39 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @290
+					(object TransView "" @284
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580974120198"
-					    client     	@284
-					    supplier   	@289
+					    client     	@278
+					    supplier   	@283
 					    vertices   	(list Points
 						(473, 741)
 						(838, 744))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @291
+					(object TransView "" @285
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809745D0241"
-					    client     	@289
-					    supplier   	@286
+					    client     	@283
+					    supplier   	@280
 					    vertices   	(list Points
 						(1009, 798)
 						(1009, 1088)
 						(470, 1087))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @292
+					(object Swimlane "" @286
 					    location   	(1326, 0)
 					    line_color 	3342489
 					    width      	450)
-					(object TransView "" @293
+					(object TransView "" @287
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580974E903A4"
-					    client     	@286
-					    supplier   	@287
+					    client     	@280
+					    supplier   	@281
 					    vertices   	(list Points
 						(293, 1140)
 						(295, 1346))
@@ -7391,19 +7203,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @294
+					(object Swimlane "User" @288
 					    line_color 	3342489
 					    quidu      	"5809752101E0"
 					    width      	654)
-					(object StateView "StartState" "$UNNAMED$42" @295
-					    Parent_View 	@294
+					(object StateView "StartState" "$UNNAMED$42" @289
+					    Parent_View 	@288
 					    location   	(311, 125)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"5809753A02C0"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Process CRUD operation" @296
-					    Parent_View 	@294
+					(object ActivityStateView "Process CRUD operation" @290
+					    Parent_View 	@288
 					    location   	(319, 414)
 					    font       	(object Font
 						size       	10
@@ -7416,7 +7228,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@296
+						Parent_View 	@290
 						location   	(319, 417)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7432,31 +7244,31 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @297
+					(object TransView "" @291
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580975640323"
-					    client     	@295
-					    supplier   	@296
+					    client     	@289
+					    supplier   	@290
 					    vertices   	(list Points
 						(311, 154)
 						(317, 360))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object StateView "EndState" "$UNNAMED$43" @298
-					    Parent_View 	@294
+					(object StateView "EndState" "$UNNAMED$43" @292
+					    Parent_View 	@288
 					    location   	(316, 738)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580975900164"
 					    autoResize 	TRUE)
-					(object Swimlane "Server" @299
+					(object Swimlane "Server" @293
 					    location   	(654, 0)
 					    line_color 	3342489
 					    quidu      	"5809753101AB"
 					    width      	702)
-					(object ActivityStateView "Save CRUD operation to database" @300
-					    Parent_View 	@299
+					(object ActivityStateView "Save CRUD operation to database" @294
+					    Parent_View 	@293
 					    location   	(1018, 419)
 					    font       	(object Font
 						size       	10
@@ -7469,7 +7281,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@300
+						Parent_View 	@294
 						location   	(1018, 422)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7485,27 +7297,27 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @301
+					(object TransView "" @295
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809757F0105"
-					    client     	@296
-					    supplier   	@300
+					    client     	@290
+					    supplier   	@294
 					    vertices   	(list Points
 						(516, 415)
 						(793, 417))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @302
+					(object Swimlane "" @296
 					    location   	(1356, 0)
 					    line_color 	3342489
 					    width      	450)
-					(object TransView "" @303
+					(object TransView "" @297
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809759500BB"
-					    client     	@300
-					    supplier   	@298
+					    client     	@294
+					    supplier   	@292
 					    vertices   	(list Points
 						(1017, 471)
 						(1016, 738)
@@ -7604,19 +7416,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @304
+					(object Swimlane "User" @298
 					    line_color 	3342489
 					    quidu      	"580975CD0179"
 					    width      	666)
-					(object StateView "StartState" "$UNNAMED$44" @305
-					    Parent_View 	@304
+					(object StateView "StartState" "$UNNAMED$44" @299
+					    Parent_View 	@298
 					    location   	(313, 122)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580975E90011"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Fill in form" @306
-					    Parent_View 	@304
+					(object ActivityStateView "Fill in form" @300
+					    Parent_View 	@298
 					    location   	(313, 391)
 					    font       	(object Font
 						size       	10
@@ -7629,7 +7441,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@306
+						Parent_View 	@300
 						location   	(313, 394)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7644,19 +7456,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @307
+					(object TransView "" @301
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580975FA0323"
-					    client     	@305
-					    supplier   	@306
+					    client     	@299
+					    supplier   	@300
 					    vertices   	(list Points
 						(313, 152)
 						(313, 338))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Press \"add\" button" @308
-					    Parent_View 	@304
+					(object ActivityStateView "Press \"add\" button" @302
+					    Parent_View 	@298
 					    location   	(312, 697)
 					    font       	(object Font
 						size       	10
@@ -7669,7 +7481,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@308
+						Parent_View 	@302
 						location   	(312, 700)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7686,19 +7498,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @309
+					(object TransView "" @303
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580976180075"
-					    client     	@306
-					    supplier   	@308
+					    client     	@300
+					    supplier   	@302
 					    vertices   	(list Points
 						(312, 444)
 						(312, 643))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "View dashboard page" @310
-					    Parent_View 	@304
+					(object ActivityStateView "View dashboard page" @304
+					    Parent_View 	@298
 					    location   	(315, 1010)
 					    font       	(object Font
 						size       	10
@@ -7711,7 +7523,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@310
+						Parent_View 	@304
 						location   	(315, 1013)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7727,20 +7539,20 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$45" @311
-					    Parent_View 	@304
+					(object StateView "EndState" "$UNNAMED$45" @305
+					    Parent_View 	@298
 					    location   	(314, 1273)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580976510331"
 					    autoResize 	TRUE)
-					(object Swimlane "Server" @312
+					(object Swimlane "Server" @306
 					    location   	(666, 0)
 					    line_color 	3342489
 					    quidu      	"580975D90372"
 					    width      	638)
-					(object ActivityStateView "Add equipment data to database" @313
-					    Parent_View 	@312
+					(object ActivityStateView "Add equipment data to database" @307
+					    Parent_View 	@306
 					    location   	(1003, 699)
 					    font       	(object Font
 						size       	10
@@ -7753,7 +7565,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@313
+						Parent_View 	@307
 						location   	(1003, 702)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7769,39 +7581,39 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @314
+					(object TransView "" @308
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58097632008C"
-					    client     	@308
-					    supplier   	@313
+					    client     	@302
+					    supplier   	@307
 					    vertices   	(list Points
 						(483, 697)
 						(805, 698))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @315
+					(object TransView "" @309
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809764B0272"
-					    client     	@313
-					    supplier   	@310
+					    client     	@307
+					    supplier   	@304
 					    vertices   	(list Points
 						(1003, 752)
 						(1003, 1010)
 						(502, 1010))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @316
+					(object Swimlane "" @310
 					    location   	(1304, 0)
 					    line_color 	3342489
 					    width      	450)
-					(object TransView "" @317
+					(object TransView "" @311
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580976540010"
-					    client     	@310
-					    supplier   	@311
+					    client     	@304
+					    supplier   	@305
 					    vertices   	(list Points
 						(314, 1062)
 						(314, 1230))
@@ -7909,19 +7721,19 @@
 				    origin_x   	0
 				    origin_y   	0
 				    items      	(list diagram_item_list
-					(object Swimlane "User" @318
+					(object Swimlane "User" @312
 					    line_color 	3342489
 					    quidu      	"580976A102B8"
 					    width      	694)
-					(object StateView "StartState" "$UNNAMED$46" @319
-					    Parent_View 	@318
+					(object StateView "StartState" "$UNNAMED$46" @313
+					    Parent_View 	@312
 					    location   	(340, 106)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580976B702F6"
 					    autoResize 	TRUE)
-					(object ActivityStateView "Fill in message form" @320
-					    Parent_View 	@318
+					(object ActivityStateView "Fill in message form" @314
+					    Parent_View 	@312
 					    location   	(343, 372)
 					    font       	(object Font
 						size       	10
@@ -7934,7 +7746,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@320
+						Parent_View 	@314
 						location   	(343, 375)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7949,19 +7761,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @321
+					(object TransView "" @315
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580976D1011C"
-					    client     	@319
-					    supplier   	@320
+					    client     	@313
+					    supplier   	@314
 					    vertices   	(list Points
 						(340, 136)
 						(342, 318))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Press \"send\" button" @322
-					    Parent_View 	@318
+					(object ActivityStateView "Press \"send\" button" @316
+					    Parent_View 	@312
 					    location   	(346, 694)
 					    font       	(object Font
 						size       	10
@@ -7974,7 +7786,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@322
+						Parent_View 	@316
 						location   	(346, 697)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -7991,19 +7803,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @323
+					(object TransView "" @317
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580976E6025E"
-					    client     	@320
-					    supplier   	@322
+					    client     	@314
+					    supplier   	@316
 					    vertices   	(list Points
 						(343, 424)
 						(345, 640))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Flush message form" @324
-					    Parent_View 	@318
+					(object ActivityStateView "Flush message form" @318
+					    Parent_View 	@312
 					    location   	(343, 991)
 					    font       	(object Font
 						size       	10
@@ -8016,7 +7828,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@324
+						Parent_View 	@318
 						location   	(343, 994)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -8031,20 +7843,20 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object StateView "EndState" "$UNNAMED$47" @325
-					    Parent_View 	@318
+					(object StateView "EndState" "$UNNAMED$47" @319
+					    Parent_View 	@312
 					    location   	(344, 1303)
 					    icon_style 	"Icon"
 					    line_color 	3342489
 					    quidu      	"580977FF00CB"
 					    autoResize 	TRUE)
-					(object Swimlane "Server" @326
+					(object Swimlane "Server" @320
 					    location   	(694, 0)
 					    line_color 	3342489
 					    quidu      	"580976AF01E8"
 					    width      	692)
-					(object ActivityStateView "Save message in database" @327
-					    Parent_View 	@326
+					(object ActivityStateView "Save message in database" @321
+					    Parent_View 	@320
 					    location   	(1043, 694)
 					    font       	(object Font
 						size       	10
@@ -8057,7 +7869,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@327
+						Parent_View 	@321
 						location   	(1043, 697)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -8072,19 +7884,19 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @328
+					(object TransView "" @322
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"5809770F0061"
-					    client     	@322
-					    supplier   	@327
+					    client     	@316
+					    supplier   	@321
 					    vertices   	(list Points
 						(517, 694)
 						(872, 694))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object ActivityStateView "Send message to client" @329
-					    Parent_View 	@326
+					(object ActivityStateView "Send message to client" @323
+					    Parent_View 	@320
 					    location   	(1043, 997)
 					    font       	(object Font
 						size       	10
@@ -8097,7 +7909,7 @@
 						color      	0
 						default_color 	TRUE)
 					    label      	(object ItemLabel
-						Parent_View 	@329
+						Parent_View 	@323
 						location   	(1043, 1000)
 						fill_color 	13434879
 						anchor_loc 	1
@@ -8112,38 +7924,38 @@
 					    height     	106
 					    annotation 	1
 					    autoResize 	TRUE)
-					(object TransView "" @330
+					(object TransView "" @324
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580977B303CD"
-					    client     	@327
-					    supplier   	@329
+					    client     	@321
+					    supplier   	@323
 					    vertices   	(list Points
 						(1043, 747)
 						(1043, 944))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object TransView "" @331
+					(object TransView "" @325
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"580977F600B6"
-					    client     	@329
-					    supplier   	@324
+					    client     	@323
+					    supplier   	@318
 					    vertices   	(list Points
 						(871, 995)
 						(514, 992))
 					    line_style 	0
 					    x_offset   	FALSE)
-					(object Swimlane "" @332
+					(object Swimlane "" @326
 					    location   	(1386, 0)
 					    line_color 	3342489
 					    width      	450)
-					(object TransView "" @333
+					(object TransView "" @327
 					    stereotype 	TRUE
 					    line_color 	3342489
 					    quidu      	"58097801037E"
-					    client     	@324
-					    supplier   	@325
+					    client     	@318
+					    supplier   	@319
 					    vertices   	(list Points
 						(343, 1043)
 						(343, 1261))
@@ -8161,7 +7973,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object UseCaseView "Use Case View::Check repair progress" @334
+		    (object UseCaseView "Use Case View::Check repair progress" @328
 			location   	(1647, 350)
 			font       	(object Font
 			    size       	10
@@ -8174,7 +7986,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@334
+			    Parent_View 	@328
 			    location   	(1647, 488)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8186,7 +7998,7 @@
 			fill_color 	13434879
 			quidu      	"580944E403DA"
 			height     	118)
-		    (object Label @335
+		    (object Label @329
 			location   	(2530, 872)
 			font       	(object Font
 			    size       	10
@@ -8202,7 +8014,7 @@
 			max_width  	13
 			justify    	1
 			label      	"")
-		    (object ClassView "Class" "Use Case View::Client" @336
+		    (object ClassView "Class" "Use Case View::Client" @330
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -8218,7 +8030,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@336
+			    Parent_View 	@330
 			    location   	(1222, 839)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8231,7 +8043,7 @@
 			quidu      	"580944D2037F"
 			annotation 	8
 			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$6" @337
+		    (object AssociationViewNew "$UNNAMED$6" @331
 			location   	(1361, 567)
 			font       	(object Font
 			    size       	10
@@ -8247,31 +8059,31 @@
 			line_color 	3342489
 			quidu      	"58094566002C"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$7" @338
-				Parent_View 	@337
+			    (object RoleView "$UNNAMED$7" @332
+				Parent_View 	@331
 				location   	(139, -112)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5809456800E8"
-				client     	@337
-				supplier   	@334
+				client     	@331
+				supplier   	@328
 				vertices   	(list Points
 				    (1361, 567)
 				    (1444, 506))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$8" @339
-				Parent_View 	@337
+			    (object RoleView "$UNNAMED$8" @333
+				Parent_View 	@331
 				location   	(139, -112)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5809456800EA"
-				client     	@337
-				supplier   	@336
+				client     	@331
+				supplier   	@330
 				vertices   	(list Points
 				    (1361, 567)
 				    (1279, 629))
 				line_style 	0)))
-		    (object UseCaseView "Use Case View::Connect" @340
+		    (object UseCaseView "Use Case View::Connect" @334
 			location   	(1634, 681)
 			font       	(object Font
 			    size       	10
@@ -8284,7 +8096,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@340
+			    Parent_View 	@334
 			    location   	(1634, 819)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8296,7 +8108,7 @@
 			fill_color 	13434879
 			quidu      	"58094513029C"
 			height     	118)
-		    (object AssociationViewNew "$UNNAMED$0" @341
+		    (object AssociationViewNew "$UNNAMED$0" @335
 			location   	(1401, 678)
 			font       	(object Font
 			    size       	10
@@ -8312,31 +8124,31 @@
 			line_color 	3342489
 			quidu      	"580945430360"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$1" @342
-				Parent_View 	@341
+			    (object RoleView "$UNNAMED$1" @336
+				Parent_View 	@335
 				location   	(178, 6)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945440370"
-				client     	@341
-				supplier   	@340
+				client     	@335
+				supplier   	@334
 				vertices   	(list Points
 				    (1401, 678)
 				    (1523, 678))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$2" @343
-				Parent_View 	@341
+			    (object RoleView "$UNNAMED$2" @337
+				Parent_View 	@335
 				location   	(178, 6)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945440372"
-				client     	@341
-				supplier   	@336
+				client     	@335
+				supplier   	@330
 				vertices   	(list Points
 				    (1401, 678)
 				    (1279, 679))
 				line_style 	0)))
-		    (object UseCaseView "Use Case View::Get equipment to repair" @344
+		    (object UseCaseView "Use Case View::Get equipment to repair" @338
 			location   	(2547, 271)
 			font       	(object Font
 			    size       	10
@@ -8349,7 +8161,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@344
+			    Parent_View 	@338
 			    location   	(2547, 409)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8361,7 +8173,7 @@
 			fill_color 	13434879
 			quidu      	"580945840350"
 			height     	118)
-		    (object UseCaseView "Use Case View::Send sms" @345
+		    (object UseCaseView "Use Case View::Send sms" @339
 			location   	(2547, 990)
 			font       	(object Font
 			    size       	10
@@ -8374,7 +8186,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@345
+			    Parent_View 	@339
 			    location   	(2547, 1128)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8386,7 +8198,7 @@
 			fill_color 	13434879
 			quidu      	"580945A30014"
 			height     	118)
-		    (object UseCaseView "Use Case View::Change repair progress status" @346
+		    (object UseCaseView "Use Case View::Change repair progress status" @340
 			location   	(2641, 631)
 			font       	(object Font
 			    size       	10
@@ -8399,7 +8211,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@346
+			    Parent_View 	@340
 			    location   	(2641, 769)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8411,7 +8223,7 @@
 			fill_color 	13434879
 			quidu      	"580945BD0100"
 			height     	118)
-		    (object ClassView "Class" "Use Case View::Manager" @347
+		    (object ClassView "Class" "Use Case View::Manager" @341
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -8427,7 +8239,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@347
+			    Parent_View 	@341
 			    location   	(2046, 837)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8440,7 +8252,7 @@
 			quidu      	"5809453701D5"
 			annotation 	8
 			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$3" @348
+		    (object AssociationViewNew "$UNNAMED$3" @342
 			location   	(1864, 677)
 			font       	(object Font
 			    size       	10
@@ -8456,31 +8268,31 @@
 			line_color 	3342489
 			quidu      	"580945480121"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$4" @349
-				Parent_View 	@348
+			    (object RoleView "$UNNAMED$4" @343
+				Parent_View 	@342
 				location   	(-190, 5)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945480324"
-				client     	@348
-				supplier   	@340
+				client     	@342
+				supplier   	@334
 				vertices   	(list Points
 				    (1864, 677)
 				    (1742, 677))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$5" @350
-				Parent_View 	@348
+			    (object RoleView "$UNNAMED$5" @344
+				Parent_View 	@342
 				location   	(-190, 5)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945480326"
-				client     	@348
-				supplier   	@347
+				client     	@342
+				supplier   	@341
 				vertices   	(list Points
 				    (1864, 677)
 				    (1987, 677))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$12" @351
+		    (object AssociationViewNew "$UNNAMED$12" @345
 			location   	(2224, 531)
 			font       	(object Font
 			    size       	10
@@ -8496,31 +8308,31 @@
 			line_color 	3342489
 			quidu      	"580945900244"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$13" @352
-				Parent_View 	@351
+			    (object RoleView "$UNNAMED$13" @346
+				Parent_View 	@345
 				location   	(178, -146)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5809459003DE"
-				client     	@351
-				supplier   	@344
+				client     	@345
+				supplier   	@338
 				vertices   	(list Points
 				    (2224, 531)
 				    (2345, 434))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$14" @353
-				Parent_View 	@351
+			    (object RoleView "$UNNAMED$14" @347
+				Parent_View 	@345
 				location   	(178, -146)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5809459003E0"
-				client     	@351
-				supplier   	@347
+				client     	@345
+				supplier   	@341
 				vertices   	(list Points
 				    (2224, 531)
 				    (2103, 628))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$15" @354
+		    (object AssociationViewNew "$UNNAMED$15" @348
 			location   	(2278, 821)
 			font       	(object Font
 			    size       	10
@@ -8536,31 +8348,31 @@
 			line_color 	3342489
 			quidu      	"580945A70194"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$16" @355
-				Parent_View 	@354
+			    (object RoleView "$UNNAMED$16" @349
+				Parent_View 	@348
 				location   	(232, 144)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945A70389"
-				client     	@354
-				supplier   	@345
+				client     	@348
+				supplier   	@339
 				vertices   	(list Points
 				    (2278, 821)
 				    (2454, 931))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$17" @356
-				Parent_View 	@354
+			    (object RoleView "$UNNAMED$17" @350
+				Parent_View 	@348
 				location   	(232, 144)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945A7038B"
-				client     	@354
-				supplier   	@347
+				client     	@348
+				supplier   	@341
 				vertices   	(list Points
 				    (2278, 821)
 				    (2103, 711))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$18" @357
+		    (object AssociationViewNew "$UNNAMED$18" @351
 			location   	(2317, 653)
 			font       	(object Font
 			    size       	10
@@ -8576,31 +8388,31 @@
 			line_color 	3342489
 			quidu      	"580945C503A7"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$19" @358
-				Parent_View 	@357
+			    (object RoleView "$UNNAMED$19" @352
+				Parent_View 	@351
 				location   	(271, -24)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945C60191"
-				client     	@357
-				supplier   	@346
+				client     	@351
+				supplier   	@340
 				vertices   	(list Points
 				    (2317, 653)
 				    (2531, 636))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$20" @359
-				Parent_View 	@357
+			    (object RoleView "$UNNAMED$20" @353
+				Parent_View 	@351
 				location   	(271, -24)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945C60193"
-				client     	@357
-				supplier   	@347
+				client     	@351
+				supplier   	@341
 				vertices   	(list Points
 				    (2317, 653)
 				    (2103, 670))
 				line_style 	0)))
-		    (object UseCaseView "Use Case View::CRUD manager" @360
+		    (object UseCaseView "Use Case View::CRUD manager" @354
 			location   	(1649, 1015)
 			font       	(object Font
 			    size       	10
@@ -8613,7 +8425,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@360
+			    Parent_View 	@354
 			    location   	(1649, 1153)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8625,7 +8437,7 @@
 			fill_color 	13434879
 			quidu      	"580945DD0204"
 			height     	118)
-		    (object ClassView "Class" "Use Case View::Administrator" @361
+		    (object ClassView "Class" "Use Case View::Administrator" @355
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -8641,7 +8453,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@361
+			    Parent_View 	@355
 			    location   	(1223, 1172)
 			    anchor_loc 	1
 			    nlines     	2
@@ -8654,7 +8466,7 @@
 			quidu      	"580945E70319"
 			annotation 	8
 			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$21" @362
+		    (object AssociationViewNew "$UNNAMED$21" @356
 			location   	(1409, 1011)
 			font       	(object Font
 			    size       	10
@@ -8670,26 +8482,26 @@
 			line_color 	3342489
 			quidu      	"580945F30051"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$22" @363
-				Parent_View 	@362
+			    (object RoleView "$UNNAMED$22" @357
+				Parent_View 	@356
 				location   	(179, -136)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945F3016F"
-				client     	@362
-				supplier   	@360
+				client     	@356
+				supplier   	@354
 				vertices   	(list Points
 				    (1409, 1011)
 				    (1539, 1011))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$23" @364
-				Parent_View 	@362
+			    (object RoleView "$UNNAMED$23" @358
+				Parent_View 	@356
 				location   	(179, -136)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"580945F30171"
-				client     	@362
-				supplier   	@361
+				client     	@356
+				supplier   	@355
 				vertices   	(list Points
 				    (1409, 1011)
 				    (1280, 1012))

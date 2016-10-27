@@ -1,0 +1,48 @@
+.admin_login
+  text-align: center
+  background-color: #F0F1F6
+  height: 100%
+  padding: 50px 15px
+  @media only screen and (max-width : 768px)
+    padding: 15px
+  .login
+    &--wrap
+      background-color: #fff
+      display: inline-block
+      width: 480px
+      color: $flat-blue
+      text-align: left
+      border-radius: 5px
+      color: #666
+      @media only screen and (max-width : 480px)
+        width: 100%
+    &--header
+      font-size: em(24px)
+      background-color: $flat-blue
+      border-radius: 5px 5px 0 0
+      padding: 15px
+      color: #FFF
+    &--content
+      border: 1px solid #D2D3D8
+      border-top: none
+      border-radius: 0 0 5px 5px
+      padding: 30px 15px 15px
+      .input-field
+        position: relative
+        input
+          margin-bottom: 15px
+        svg
+          position: absolute
+          right: 10px
+          top: 10px
+          width: 20px
+          height: 20px
+      .btn-field
+        margin-top: 15px
+        position: relative
+        .remember_me
+          position: absolute
+          left: 110px
+          top: 12px
+          input
+            outline: none
