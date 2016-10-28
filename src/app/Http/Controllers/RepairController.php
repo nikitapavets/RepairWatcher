@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Repair;
 use App\Models\Client;
+use App\Models\RepairStatus;
 
 class RepairController extends Controller
 {
@@ -91,17 +92,20 @@ class RepairController extends Controller
 		return redirect()->route('admin');
 	}
 
-	public function addStatuses(){
+	public function addStatuses(RepairStatus $repairStatus){
 
 		$admin= json_decode($_COOKIE['admin']);
 		$page = [
 			'title' => 'AnyComp | Добавление статусов технике'
 		];
 
+		$statuses = $repairStatus->getAllStatuses();
+
 		return view('admin.repair.add_statuses', [
 			'admin' => $admin,
 			'admin_title' => 'Добавление статусов технике',
-			'page' => $page
+			'page' => $page,
+			'statuses' => $statuses
 		]);
 	}
 

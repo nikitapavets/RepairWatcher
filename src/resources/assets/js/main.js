@@ -80,9 +80,11 @@ $( document ).ready(function(){
         $('.about_repair').removeClass('active');
     });
 
-    $( function() {
-        $( "#sortable1, #sortable2" ).sortable({
-            connectWith: ".connectedSortable"
-        }).disableSelection();
-    } );
+    /* Add statuses page /admin/repair/add_statuses */
+
+    // statuses drag and drop
+    $( "#sortable_all, #sortable_current" ).sortable({
+        connectWith: ".connectedSortable"
+    }).disableSelection();
+
 });
