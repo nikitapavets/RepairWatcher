@@ -59,7 +59,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/admin/repair/tech_list">
                                 <div class="item-ico">
                                     <svg class="top-menu__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use xlink:href='#list_solid'></use>

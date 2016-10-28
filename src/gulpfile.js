@@ -49,13 +49,14 @@ gulp.task('scripts', function() {
 
 gulp.task('scriptlibs', function() {
     return gulp.src([
+        'bower_components/jquery/dist/jquery.min.js',
         'resources/assets/libs/modernizr/modernizr.js',
-        'resources/assets/libs/jquery/jquery-1.11.2.min.js',
         'resources/assets/libs/animate/animate-css.js',
         'resources/assets/libs/Magnific-Popup/jquery.magnific-popup.min.js',
         'resources/assets/libs/jQuery.equalHeights/jquery.equalheights.min.js',
         'resources/assets/libs/waypoints/waypoints-1.6.2.min.js',
-        'resources/assets/libs/materialize/js/materialize.min.js'
+        'resources/assets/libs/materialize/js/materialize.min.js',
+        'bower_components/jquery-ui/jquery-ui.min.js',
     ])
     .pipe(uglify())
     .pipe(concat('libs.js'))

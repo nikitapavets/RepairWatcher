@@ -21,20 +21,36 @@ class RepairController extends Controller
         ]);
     }
 
-    public function edit($id){
-        echo $id;
+    public function techList(Repair $repair){
+
+	    $admin= json_decode($_COOKIE['admin']);
+	    $page = [
+		    'title' => 'AnyComp | Список техники в ремонте'
+	    ];
+
+	    $repairs = array();
+	    $repairs['paid'] = $repair->getPaidRepairs();
+	    $repairs['free'] = $repair->getFreeRepairs();
+	    $repairs['complete'] = $repair->getCompleteRepairs();
+
+	    return view('admin.repair.tech_list', [
+		    'admin' => $admin,
+		    'admin_title' => 'Список техники в ремонте',
+		    'page' => $page,
+		    'repairs' => $repairs
+	    ]);
     }
 
     public function addTech(){
 
 	    $admin= json_decode($_COOKIE['admin']);
 	    $page = [
-		    'title' => 'AnyComp | Добавление техники'
+		    'title' => 'AnyComp | Добавление техники в ремонт'
 	    ];
 
 	    return view('admin.repair.add_tech', [
 		    'admin' => $admin,
-		    'admin_title' => 'Добавление техники',
+		    'admin_title' => 'Добавление техники в ремонт',
 		    'page' => $page
 	    ]);
     }
@@ -73,6 +89,20 @@ class RepairController extends Controller
 		$repair->addToDB();
 
 		return redirect()->route('admin');
+	}
+
+	public function addStatuses(){
+
+		$admin= json_decode($_COOKIE['admin']);
+		$page = [
+			'title' => 'AnyComp | Добавление статусов технике'
+		];
+
+		return view('admin.repair.add_statuses', [
+			'admin' => $admin,
+			'admin_title' => 'Добавление статусов технике',
+			'page' => $page
+		]);
 	}
 
 }

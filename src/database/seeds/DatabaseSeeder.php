@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,42 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('UsersSeeder');
-    }
-}
-
-
-class UsersSeeder extends Seeder{
-
-    public function run(){
-
-        DB::table('Users')->delete();
-
-        User::create([
-            'login' => 'n.pavets',
-            'password' => '6136132',
-            'first_name' => 'Никита',
-            'second_name' => 'Павец',
-            'rang' => 'admin',
-            'img' => '/img/team/nikita.png'
-        ]);
-
-        User::create([
-            'login' => 'a.karimova',
-            'password' => '7155929',
-            'first_name' => 'Алёна',
-            'second_name' => 'Каримова',
-            'rang' => 'admin',
-            'img' => '/img/team/alena.png'
-        ]);
-
-        User::create([
-            'login' => 'd.karimov',
-            'password' => '7175804',
-            'first_name' => 'Дмитрий',
-            'second_name' => 'Каримов',
-            'rang' => 'admin',
-            'img' => '/img/team/dima.png'
-        ]);
+        $this->call('RepairStatusesTableSeeder');
     }
 }

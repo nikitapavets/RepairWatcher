@@ -65,4 +65,24 @@ $( document ).ready(function(){
         if ($(event.target).closest(".main-menu__icon").length) return;
         $('.main-menu__list').removeClass('show');
     });
+
+    /* Tech list page /admin/repair/tech_list */
+
+    // open user info
+    $('.about_repair_init').click(function(){
+        $('.about_repair').removeClass('active');
+        $(this).next().addClass('active');
+    });
+
+    $(document).click(function(event){
+        if ($(event.target).closest(".about_repair_init").length) return;
+        if ($(event.target).closest(".about_repair").length) return;
+        $('.about_repair').removeClass('active');
+    });
+
+    $( function() {
+        $( "#sortable1, #sortable2" ).sortable({
+            connectWith: ".connectedSortable"
+        }).disableSelection();
+    } );
 });
