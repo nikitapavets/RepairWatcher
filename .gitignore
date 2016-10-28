@@ -1,4 +1,5 @@
 src/node_modules
+src/bower_components
 src/public/storage
 src/vendor
 /.idea
