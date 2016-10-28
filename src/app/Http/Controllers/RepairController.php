@@ -96,14 +96,14 @@ class RepairController extends Controller
 
 		$admin= json_decode($_COOKIE['admin']);
 		$page = [
-			'title' => 'AnyComp | Добавление статусов технике'
+			'title' => 'AnyComp | Добавление статусов ремонта технике'
 		];
 
 		$statuses = $repairStatus->getAllStatuses();
 
 		return view('admin.repair.add_statuses', [
 			'admin' => $admin,
-			'admin_title' => 'Добавление статусов технике',
+			'admin_title' => 'Добавление статусов ремонта технике',
 			'page' => $page,
 			'statuses' => $statuses
 		]);
