@@ -80,6 +80,14 @@ $( document ).ready(function(){
         $('.about_repair').removeClass('active');
     });
 
+    // change repair status event
+    $('.check_status').change(function(){
+
+        var checked = $(this).is(':checked');
+        var repair_status_id = $(this).attr('repair-statuses-id');
+
+    });
+
     /* Add statuses page /admin/repair/add_statuses */
 
     // statuses drag and drop

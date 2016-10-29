@@ -51,7 +51,11 @@
                             @for($i = 0; $i < count($repair->statuses); $i++)
                             <div class="status">
                                 <label for="check_status_{{$i}}">
-                                    <input type="checkbox" id="check_status_{{$i}}">
+                                    @if($repair->statuses[$i]->done == 0)
+                                        <input type="checkbox" id="check_status_{{$i}}" class="check_status" repair-statuses-id="{{$repair->statuses[$i]->id}}">
+                                    @else
+                                        <input type="checkbox" id="check_status_{{$i}}" class="check_status" repair-statuses-id="{{$repair->statuses[$i]->id}}" checked>
+                                    @endif
                                     {{$repair->statuses[$i]->status}}
                                 </label>
                             </div>
