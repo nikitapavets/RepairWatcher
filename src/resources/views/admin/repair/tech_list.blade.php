@@ -20,17 +20,7 @@
                 @foreach($repairs['paid'] as $repair)
                     @php
                         $receipt_number = $repair->receipt_number;
-                        $status = '';
-                        switch($repair->status){
-                            case 'repair':
-                                $status = 'Ремонт';
-                                $status_color = 'teal-text';
-                                break;
-                            case 'complete':
-                                $status = 'Готов';
-                                $status_color = 'green-text';
-                                break;
-                        }
+                        $status = $repair->statuses[0]->status;
                         $title = $repair->title;
                         $token = $repair->token;
                         $fio = $repair->second_name.' '.substr($repair->first_name, 0, 2).'. '.substr($repair->father_name, 0, 2).'.';
@@ -55,7 +45,19 @@
                     @endphp
                 <tr>
                     <td>{{$receipt_number}}</td>
-                    <td>{{$status}}</td>
+                    <td>
+                        <a href="javascript:" class="about_repair_init">{{$status}}</a>
+                        <div class="about_repair statuses">
+                            @for($i = 0; $i < count($repair->statuses); $i++)
+                            <div class="status">
+                                <label for="check_status_{{$i}}">
+                                    <input type="checkbox" id="check_status_{{$i}}">
+                                    {{$repair->statuses[$i]->status}}
+                                </label>
+                            </div>
+                            @endfor
+                        </div>
+                    </td>
                     <td>
                         <a href="javascript:" class="about_repair_init">{{$title}}</a>
                         <div class="about_repair">

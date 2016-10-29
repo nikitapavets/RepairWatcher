@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin'], function(){
 		Route::get('/repair/add_tech',['as' => 'admin.repair.add_tech', 'uses' => 'RepairController@addTech']);
 		Route::post('/repair/save_tech', ['as' => 'admin.repair.save_tech', 'uses' => 'RepairController@saveTech']);
 		Route::get('/repair/add_statuses', ['as' => 'admin.repair.add_statuses', 'uses' => 'RepairController@addStatuses']);
+		Route::post('/repair/save_statuses', ['as' => 'admin.repair.save_statuses', 'uses' => 'RepairController@saveStatuses']);
 
 	});
 

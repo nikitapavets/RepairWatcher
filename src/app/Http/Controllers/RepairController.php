@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Models\Repair;
 use App\Models\Client;
 use App\Models\RepairStatus;
+use App\Models\RepairConnectStatus;
 
 class RepairController extends Controller
 {
@@ -22,7 +23,7 @@ class RepairController extends Controller
         ]);
     }
 
-    public function techList(Repair $repair){
+    public function techList(Repair $repair, RepairConnectStatus $repairConnectStatus){
 
 	    $admin= json_decode($_COOKIE['admin']);
 	    $page = [
@@ -33,6 +34,13 @@ class RepairController extends Controller
 	    $repairs['paid'] = $repair->getPaidRepairs();
 	    $repairs['free'] = $repair->getFreeRepairs();
 	    $repairs['complete'] = $repair->getCompleteRepairs();
+
+		for($i = 0; $i < count($repairs['paid']); $i++){
+			$repairs['paid'][$i]['statuses'] = $repairConnectStatus->getConnections($repairs['paid'][$i]->id);
+		}
+		for($i = 0; $i < count($repairs['free']); $i++){
+			$repairs['free'][$i]['statuses'] = $repairConnectStatus->getConnections($repairs['free'][$i]->id);
+		}
 
 	    return view('admin.repair.tech_list', [
 		    'admin' => $admin,
@@ -87,12 +95,14 @@ class RepairController extends Controller
 		$newProduct['token'] = substr(md5(time()), -8, 8);
 
 		$repair->init($newProduct);
-		$repair->addToDB();
+		$repair_id = $repair->addToDB();
 
-		return redirect()->route('admin');
+		return redirect()->route('admin.repair.add_statuses', ['repair_id' => $repair_id]);
 	}
 
-	public function addStatuses(RepairStatus $repairStatus){
+	public function addStatuses(Request $request, RepairStatus $repairStatus){
+
+		$repair_id = $request->input('repair_id') ?? 0;
 
 		$admin= json_decode($_COOKIE['admin']);
 		$page = [
@@ -105,8 +115,24 @@ class RepairController extends Controller
 			'admin' => $admin,
 			'admin_title' => 'Добавление статусов ремонта технике',
 			'page' => $page,
-			'statuses' => $statuses
+			'statuses' => $statuses,
+			'repair_id' => $repair_id
 		]);
+	}
+
+	public function saveStatuses(Request $request, RepairConnectStatus $repairConnectStatus){
+
+		$statuses = $request->all();
+		$repair_id = $request->input('repair_id') ?? 0;
+		foreach ($statuses as $key => $status){
+
+			if($key > 0){
+				$repairConnectStatus->addConnection($repair_id, $key);
+			}
+
+		}
+
+		return redirect()->route('admin.repair.tech_list');
 	}
 
 }

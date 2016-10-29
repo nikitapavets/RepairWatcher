@@ -35,7 +35,7 @@ class Repair extends Model
 
     public function addToDB(){
 
-        $this->insert([
+        return $this->insertGetId([
             'client_id' => $this->_client_id,
             'admin_id' => $this->_admin_id,
             'title' => $this->_title,
