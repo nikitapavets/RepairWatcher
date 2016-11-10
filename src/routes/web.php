@@ -2,11 +2,17 @@
 
 Route::pattern('id', '[0-9]+');
 
-Route::get('/', function () {
-    return view('progress/index');
-});
+Route::get('/', ['as' => 'index', 'uses' => 'RepairController@index']);
 
-Route::get('progress', ['as' => 'progress.progress', 'uses' => 'RepairController@showProgress']);
+Route::group(['prefix' => 'progress'], function(){
+
+	Route::group(['middleware' => 'progress'], function(){
+
+		Route::get('/{token?}', ['as' => 'progress.progress', 'uses' => 'RepairController@showProgress']);
+
+	});
+
+});
 
 Route::group(['prefix' => 'admin'], function(){
 

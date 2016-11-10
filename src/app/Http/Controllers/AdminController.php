@@ -24,11 +24,13 @@ class AdminController extends Controller {
 	    	'title' => 'AnyComp | Панель управления'
 	    ];
 
-        return view('admin.index', [
+	    return redirect()->route('admin.repair.tech_list');
+
+        /*return view('admin.index', [
             'admin' => $admin,
             'admin_title' => 'Панель управления',
 	        'page' => $page
-        ]);
+        ]);*/
     }
 
 	/**

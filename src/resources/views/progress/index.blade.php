@@ -20,7 +20,6 @@
                                     </ul>
                                 </nav>
                                 <a id="showMenu" class="progress--header__top-menu--ico">
-                                    <img src="/img/svg/menu.svg" alt="">
                                 </a>
                                 <div class="clearfix"></div>
 
@@ -32,8 +31,10 @@
                                 <div class="progress--header__search">
                                     <div class="row">
                                         <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
-                                            <input type="text" placeholder="Введите код техники">
-                                            <button type="submit" class="search-btn"></button>
+                                            {{ Form::open(array('url' => '/progress', 'method' => 'get')) }}
+                                                <input type="text" placeholder="Введите код техники" name="token" autocomplete="off">
+                                                <button type="submit" class="search-btn"></button>
+                                            {{ Form::close() }}
                                         </div>
                                     </div>
                                 </div>

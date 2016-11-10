@@ -60,7 +60,7 @@
 
                             <div class="main-logo">
 
-                                <a href="#">
+                                <a href="/">
                                     <svg class="main-logo__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use xlink:href='#wrench_tool'></use>
                                     </svg>
@@ -74,8 +74,9 @@
                             <nav class="main-menu">
 
                                 <ul class="main-menu__list">
-                                    <li><a href="#">Как пользоваться?</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="javascript:" id="go-to-repair-progress">Прогресс</a></li>
+                                    <li><a href="javascript:" id="go-to-what-we-do">Наши услуги</a></li>
+                                    <li><a href="javascript:" id="go-to-contacts">Контакты</a></li>
                                 </ul>
                                 <a href="javascript:;" class="main-menu__icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -101,17 +102,29 @@
 
                         <div class="current-status__info">
                             <div class="title">Код</div>
-                            <div class="value">og5sf6</div>
+                            <div class="value">{{ $repair->token }}</div>
                         </div>
 
                         <div class="current-status__info">
                             <div class="title">Техника:</div>
-                            <div class="value">Принтер HP LaserJet Pro P1102s</div>
+                            <div class="value">{{ $repair->title }}</div>
                         </div>
 
+                        @php
+
+                            $current_step = 0;
+
+                            for($i = 1; $i < count($statuses); $i++){
+                                if($statuses[$i-1]->done === 1){
+                                    $current_step = $i;
+                                }
+                            }
+
+                        @endphp
+
                         <div class="current-status__info">
-                            <div class="title">Стадия (3/5)</div>
-                            <div class="value">Заправка картриджа</div>
+                            <div class="title">Стадия ({{ $current_step + 1 }}/{{ count($statuses) }})</div>
+                            <div class="value">{{ $statuses[$current_step]->status }}</div>
                         </div>
 
                     </div>
@@ -121,7 +134,7 @@
 
         </div>
 
-        <div class="progress-bar section">
+        <div class="progress-bar section section__progress-bar">
 
             <div class="container">
                 <div class="row">
@@ -144,7 +157,7 @@
                                 @php
 
                                     $class_current_step = '';
-                                    if($i > 0 && $statuses[$i-1]->done === 1){
+                                    if(($i == 0 && $statuses[$i]->done !== 1) || ($i > 0 && $statuses[$i-1]->done === 1)){
                                         $class_current_step = 'now';
                                     }
 
@@ -173,7 +186,7 @@
                         </div>
                         <div class="col-md-8 col-sm-8">
 
-                            <div class="step-description">
+                            <div class="step-description {{ $class_last }}">
                                 <div class="step-description__title">{{ $statuses[$i]->status }}</div>
                                 <div class="step-description__value">{{ $statuses[$i]->descr }}</div>
                             </div>
@@ -187,7 +200,7 @@
 
         </div>
 
-        <div class="what-we-do section">
+        <div class="what-we-do section section__what-we-do">
 
             <div class="container">
                 <div class="row">
@@ -333,8 +346,9 @@
 
         </div>
 
-        <footer class="main-footer section">
+        <footer class="main-footer section section__contacts">
             <div class="container">
+
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
 

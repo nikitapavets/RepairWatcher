@@ -143,6 +143,7 @@
     color: #666
     position: relative
     margin-bottom: 80px
+    line-height: em(24px)
     &:after
       content: ''
       width: 150px
@@ -182,6 +183,12 @@
             &:after
               display: none
             margin-bottom: 0
+          @media only screen and (max-width : 480px)
+            margin-bottom: 30px
+            &:after
+              display: none
+            &.last
+              margin-bottom: 30px
         &__small
           width: 80px
           height: 80px
@@ -206,6 +213,10 @@
         margin-bottom: 15px
         font-size: em(18px)
         text-decoration: underline
+      @media only screen and (max-width : 480px)
+        margin-bottom: 30px
+        &.last
+          margin-bottom: 0
 
   .what-we-do
     background-color: #F6F6F6
@@ -226,6 +237,8 @@
       line-height: em(48px)
 
   .main-footer
+    header
+      color: #fff
     color: #FFF
     background-color: darken($main_color, 25%)
     .contacts

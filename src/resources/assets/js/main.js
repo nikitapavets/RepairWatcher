@@ -66,6 +66,20 @@ $( document ).ready(function(){
         $('.main-menu__list').removeClass('show');
     });
 
+    // scroll to link
+    $("#go-to-contacts").click(function(){
+        $("html, body").animate({scrollTop: $(".section__contacts").offset().top}, "slow");
+        return false;
+    });
+    $("#go-to-what-we-do").click(function(){
+        $("html, body").animate({scrollTop: $(".section__what-we-do").offset().top}, "slow");
+        return false;
+    });
+    $("#go-to-repair-progress").click(function(){
+        $("html, body").animate({scrollTop: $(".section__progress-bar").offset().top}, "slow");
+        return false;
+    });
+
     /* Tech list page /admin/repair/tech_list */
 
     // open user info
