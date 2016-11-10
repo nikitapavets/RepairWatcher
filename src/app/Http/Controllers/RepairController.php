@@ -9,11 +9,12 @@ use App\Models\Repair;
 use App\Models\Client;
 use App\Models\RepairStatus;
 use App\Models\RepairConnectStatus;
+use App\Models\Sms;
 
 class RepairController extends Controller
 {
 
-	public function index(){
+	public function index(Sms $sms){
 		return view('progress/index');
 	}
 
@@ -75,7 +76,7 @@ class RepairController extends Controller
 	    ]);
     }
 
-	public function saveTech(Request $request, Repair $repair, Client $client){
+	public function saveTech(Request $request, Repair $repair, Client $client, Sms $sms){
 
 		$newClient = array();
 		$newClient['second_name'] = $request->input('person_second_name');
@@ -107,6 +108,10 @@ class RepairController extends Controller
 
 		$repair->init($newProduct);
 		$repair_id = $repair->addToDB();
+
+		$msg = 'Site: remont.anycomp.by\nCode: '.$newProduct['token'];
+		$phone = $newClient['tel'];
+		$sms->sendSms($msg, $phone);
 
 		return redirect()->route('admin.repair.add_statuses', ['repair_id' => $repair_id]);
 	}
