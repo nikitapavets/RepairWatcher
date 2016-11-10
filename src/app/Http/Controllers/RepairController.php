@@ -12,14 +12,19 @@ use App\Models\RepairConnectStatus;
 
 class RepairController extends Controller
 {
-    public function showProgress(){
+    public function showProgress(Repair $repair, RepairConnectStatus $repairConnectStatus){
 
 	    $page = [
 		    'title' => 'AnyComp | Отслеживание товара в ремонте'
 	    ];
 
+	    $repair = $repair->getRepairByToken('f01d0dcf');
+	    $statuses = $repairConnectStatus->getStatusesForRepair($repair->id);
+
+
         return view('progress.progress', [
-        	'page' => $page
+        	'page' => $page,
+	        'statuses' => $statuses
         ]);
     }
 

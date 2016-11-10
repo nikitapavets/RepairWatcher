@@ -109,6 +109,13 @@ class Repair extends Model
         return $repairs;
     }
 
+    public function getRepairByToken($token){
+
+    	$repair = $this->where('token', '=', $token)->first();
+
+	    return $repair;
+    }
+
     public function scopePaid($query){
 
         $query->where('maintenance_type', '=', 'paid')

@@ -33,4 +33,18 @@ class RepairConnectStatus extends Model {
 
 	    return $statuses;
     }
+
+    public function getStatusesForRepair($repair_id){
+
+	    $statuses= $this->join('repair_statuses', 'repair_connect_statuses.status_id', '=', 'repair_statuses.id')
+		    ->select(
+			    'repair_statuses.status',
+			    'repair_statuses.descr',
+			    'repair_connect_statuses.done'
+		    )
+		    ->where('repair_connect_statuses.repair_id', '=', $repair_id)
+		    ->get();
+
+	    return $statuses;
+    }
 }

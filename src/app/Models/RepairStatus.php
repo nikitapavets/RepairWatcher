@@ -13,4 +13,11 @@ class RepairStatus extends Model
 
 	    return $this->all();
     }
+
+    public function getStatusesByToken($token){
+
+
+    }
+
+
 }
