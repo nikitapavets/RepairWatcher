@@ -21,6 +21,11 @@
                     @php
                         $receipt_number = $repair->receipt_number;
                         $status = $repair->statuses[0]->status;
+                        for($i = 0; $i < count($repair->statuses); $i++){
+                            if($repair->statuses[$i]->done == 1){
+                                $status = $repair->statuses[$i]->status;
+                            }
+                        }
                         $title = $repair->title;
                         $token = $repair->token;
                         $fio = $repair->second_name.' '.substr($repair->first_name, 0, 2).'. '.substr($repair->father_name, 0, 2).'.';
