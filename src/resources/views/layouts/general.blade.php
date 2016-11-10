@@ -14,6 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <!-- Template Basic Images Start -->
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">

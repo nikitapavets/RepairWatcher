@@ -23,7 +23,7 @@ class RepairController extends Controller
 		    'title' => 'AnyComp | Отслеживание товара в ремонте'
 	    ];
 
-	    $repair = $repair->getRepairByToken($request->tokengit);
+	    $repair = $repair->getRepairByToken($request->token);
 	    $statuses = $repairConnectStatus->getStatusesForRepair($repair->id);
 
 
@@ -144,6 +144,17 @@ class RepairController extends Controller
 		}
 
 		return redirect()->route('admin.repair.tech_list');
+	}
+
+	public function updateStatus(Request $request, RepairConnectStatus $repairConnectStatus){
+
+		$done_status = -1;
+		if($request->input('status') === 'true'){
+			$done_status = 1;
+		}elseif($request->input('status') === 'false'){
+			$done_status = 0;
+		}
+		$repairConnectStatus->setDoneStatus($request->input('status_id'), $done_status);
 	}
 
 }

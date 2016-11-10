@@ -1,5 +1,11 @@
 $( document ).ready(function(){
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     $("#btn-slide-menu").click(function(event){
 
         $(".left--menu").attr("style", "transition: 1s ease transform");
@@ -100,6 +106,11 @@ $( document ).ready(function(){
         var checked = $(this).is(':checked');
         var repair_status_id = $(this).attr('repair-statuses-id');
 
+        $.post("/admin/repair/update_status",
+            {
+                'status': checked,
+                'status_id': parseInt(repair_status_id)
+            });
     });
 
     /* Add statuses page /admin/repair/add_statuses */

@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </td>
-                    <td>{{$token}}</td>
+                    <td><a href="/progress/{{$token}}" target="_blank">{{$token}}</a></td>
                     <td>{{$diagnosis}}</td>
                     <td>
                         <a href="javascript:" class="about_repair_init">{{$fio}}</a>

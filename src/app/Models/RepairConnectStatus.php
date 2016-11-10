@@ -29,6 +29,7 @@ class RepairConnectStatus extends Model {
 			    'repair_connect_statuses.*',
 			    'repair_statuses.status'
 		    )
+		    ->where('repair_connect_statuses.repair_id', '=', $repair_id)
 		    ->get();
 
 	    return $statuses;
@@ -46,5 +47,11 @@ class RepairConnectStatus extends Model {
 		    ->get();
 
 	    return $statuses;
+    }
+
+    public function setDoneStatus($connect_id, $new_done){
+
+    	$this->where('id', '=', $connect_id)
+		    ->update(['done' => $new_done]);
     }
 }
