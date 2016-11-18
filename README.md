@@ -20,6 +20,7 @@ you will get a notification about it.
 The project will support two UI:
 * Manager interface
 * Client interface
+
 Manager interface will include following components:
 * Authorization page
 * Registration page
