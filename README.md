@@ -29,6 +29,7 @@ Manager interface will include following components:
 * Products list page
 * Add product page
 * Statistic page
+
 Client interface will include following components:
 * Enter page
 * Repair progress page
