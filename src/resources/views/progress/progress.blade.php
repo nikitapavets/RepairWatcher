@@ -115,7 +115,7 @@
                             $current_step = 0;
 
                             for($i = 1; $i < count($statuses); $i++){
-                                if($statuses[$i-1]->done === 1){
+                                if($statuses[$i-1]->done == 1){
                                     $current_step = $i;
                                 }
                             }
@@ -157,7 +157,7 @@
                                 @php
 
                                     $class_current_step = '';
-                                    if(($i == 0 && $statuses[$i]->done !== 1) || ($i > 0 && $statuses[$i-1]->done === 1)){
+                                    if(($i == 0 && $statuses[$i]->done !== 1) || ($i > 0 && $statuses[$i-1]->done == 1)){
                                         $class_current_step = 'now';
                                     }
 
@@ -170,7 +170,7 @@
 
                                 <div class="circle__big {{ $class_last }}">
 
-                                    @if($statuses[$i]->done === 1)
+                                    @if($statuses[$i]->done == 1)
                                         <div class="circle__small done">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                 <use xlink:href='#done'></use>
@@ -411,6 +411,34 @@
             </div>
         </footer>
 
+    </section>
+
+    <section class="feedback-chat">
+        <header>
+            Связь с менеджером
+        </header>
+        <div class="feedback-chat__body">
+            <div class="message manager">
+                <div class="message__author"></div>
+                <div class="message__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, rem.</div>
+            </div>
+            <div class="message client">
+                <div class="message__author">
+                    <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use xlink:href='#chat__user'></use>
+                    </svg>
+                </div>
+                <div class="message__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, rem.</div>
+            </div>
+        </div>
+        <footer>
+            <textarea rows="2" placeholder="Ваше сообщение" id="feedback-chat__msg"></textarea>
+            <button type="submit" id="feedback-chat__send">
+                <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href='#chat__send'></use>
+                </svg>
+            </button>
+        </footer>
     </section>
 
 @stop

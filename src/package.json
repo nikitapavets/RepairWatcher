@@ -32,8 +32,12 @@
     "lodash": "^4.14.0",
     "node-bourbon": "^4.2.8",
     "path": "^0.12.7",
+    "socket.io": "^1.5.1",
     "vinyl-ftp": "^0.5.0",
     "vue": "^1.0.26",
     "vue-resource": "^0.9.3"
+  },
+  "dependencies": {
+    "ioredis": "^2.4.0"
   }
 }

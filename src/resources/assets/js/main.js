@@ -86,6 +86,9 @@ $( document ).ready(function(){
         return false;
     });
 
+    // feedback chat
+
+
     /* Tech list page /admin/repair/tech_list */
 
     // open user info

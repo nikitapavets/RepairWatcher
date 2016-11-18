@@ -28,17 +28,23 @@
                         }
                         $title = $repair->title;
                         $token = $repair->token;
-                        $fio = $repair->second_name.' '.substr($repair->first_name, 0, 2).'. '.substr($repair->father_name, 0, 2).'.';
+                        $fio = $repair->second_name.' '.substr($repair->first_name, 0, 2).'. ';
+                        if(!empty($repair->father_name)){
+                            $fio.=substr($repair->father_name, 0, 2).'.';
+                        }
                         $diagnosis = $repair->diagnosis;
                         $date = $repair->adopted_in;
 
                         $fio_full = $repair->second_name.' '.$repair->first_name.' '.$repair->father_name;
-                        $address = $repair->address;
                         $tel = $repair->tel;
 
                         $code = $repair->code;
                         if(empty($code)){
                             $code = '-';
+                        }
+                        $address = $repair->address;
+                        if(empty($address)){
+                            $address = '-';
                         }
                         $set = $repair->set;
                         if(empty($set)){

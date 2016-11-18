@@ -27,7 +27,6 @@ class RepairController extends Controller
 	    $repair = $repair->getRepairByToken($request->token);
 	    $statuses = $repairConnectStatus->getStatusesForRepair($repair->id);
 
-
         return view('progress.progress', [
         	'page' => $page,
 	        'statuses' => $statuses,
@@ -102,7 +101,6 @@ class RepairController extends Controller
 		$newProduct['set'] = $request->input('product_set');
 		$newProduct['diagnosis'] = $request->input('product_diagnosis');
 		$newProduct['receipt_number'] = $request->input('info_receipt_number');
-		$newProduct['adopted_in'] = $request->input('info_date');
 		$newProduct['maintenance_type'] = $request->input('info_maintenance_type');
 		$newProduct['token'] = substr(md5(time()), -8, 8);
 

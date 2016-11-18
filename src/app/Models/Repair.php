@@ -17,7 +17,6 @@ class Repair extends Model
     private $_receipt_number;
     private $_token;
     private $_maintenance_type;
-    private $_adopted_in;
 
     public function init(array $params){
 
@@ -30,7 +29,6 @@ class Repair extends Model
         $this->_receipt_number = $params['receipt_number'] ?? 0;
         $this->_token = $params['token'] ?? '';
         $this->_maintenance_type = $params['maintenance_type'] ?? 'free';
-        $this->_adopted_in = $params['adopted_in'] ?? '';
     }
 
     public function addToDB(){
@@ -45,7 +43,7 @@ class Repair extends Model
             'receipt_number' => $this->_receipt_number,
             'token' => $this->_token,
             'maintenance_type' => $this->_maintenance_type,
-            'adopted_in' => $this->_adopted_in,
+            'adopted_in' => Carbon::now(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
