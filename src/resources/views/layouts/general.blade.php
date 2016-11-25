@@ -71,70 +71,12 @@
 @yield('content')
 
 <!-- Load Scripts Start -->
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script src="/js/main.min.js"></script>
     <!-- <script>
         var scr = {"scripts":[
             {"src" : "/js/main.min.js", "async" : false}
         ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script> -->
-
-    <script>
-        var socket = io(':6001');
-        socket.on('from_manager', function (data) {
-            console.log(data);
-            feedbackFromManager(data.msg)
-        });
-
-        function feedbackFromManager(message){
-
-            var new_message_block = '' +
-                    '<div class="message manager">' +
-                        '<div class="message__author"></div>' +
-                        '<div class="message__content">' + message + '</div>' +
-                    '</div>';
-            $('.feedback-chat__body').append(new_message_block);
-        }
-
-        function feedbackToManager(){
-
-            var message = $('#feedback-chat__msg').val();
-            $('#feedback-chat__msg').val('');
-
-            var new_message_block = '' +
-                    '<div class="message client">' +
-                        '<div class="message__author">' +
-                            '<svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-                                '<use xlink:href="#chat__user"></use>' +
-                            '</svg>' +
-                        '</div>' +
-                        '<div class="message__content">' + message + '</div>' +
-                    '</div>';
-            $('.feedback-chat__body').append(new_message_block);
-
-            socket.emit('to_manager', {
-                msg: message
-            });
-        }
-
-        $('#feedback-chat__send').click(function(event){
-
-            feedbackToManager();
-
-            event.preventDefault();
-            return false;
-        });
-
-        $('#feedback-chat__msg').keyup(function(event){
-
-            if(event.keyCode == 13) {
-                feedbackToManager();
-                return false;
-            }
-        })
-
-
-    </script>
 
 <!-- Load Scripts End -->
 

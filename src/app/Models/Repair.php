@@ -18,7 +18,7 @@ class Repair extends Model
     private $_token;
     private $_maintenance_type;
 
-    public function init(array $params){
+    public function init(array $params) {
 
         $this->_client_id = $params['client_id'] ?? 0;
         $this->_admin_id = $params['admin_id'] ?? 0;
@@ -31,7 +31,7 @@ class Repair extends Model
         $this->_maintenance_type = $params['maintenance_type'] ?? 'free';
     }
 
-    public function addToDB(){
+    public function addToDB() {
 
         return $this->insertGetId([
             'client_id' => $this->_client_id,
@@ -49,11 +49,11 @@ class Repair extends Model
         ]);
     }
 
-    public function getId(){
+    public function getId() {
         return $this->_id;
     }
 
-    public function getPaidRepairs(){
+    public function getPaidRepairs() {
 
         $repairs= $this->join('clients', 'repairs.client_id', '=', 'clients.id')
             ->select(
@@ -71,7 +71,7 @@ class Repair extends Model
         return $repairs;
     }
 
-    public function getFreeRepairs(){
+    public function getFreeRepairs() {
 
         $repairs= $this->join('clients', 'repairs.client_id', '=', 'clients.id')
             ->select(
@@ -89,7 +89,7 @@ class Repair extends Model
         return $repairs;
     }
 
-    public function getCompleteRepairs(){
+    public function getCompleteRepairs() {
 
         $repairs= $this->join('clients', 'repairs.client_id', '=', 'clients.id')
             ->select(
@@ -107,26 +107,26 @@ class Repair extends Model
         return $repairs;
     }
 
-    public function getRepairByToken($token){
+    public function getRepairByToken($token) {
 
     	$repair = $this->where('token', '=', $token)->first();
 
 	    return $repair;
     }
 
-    public function scopePaid($query){
+    public function scopePaid($query) {
 
         $query->where('maintenance_type', '=', 'paid')
             ->where('status', '=', 'repair');
     }
 
-    public function scopeFree($query){
+    public function scopeFree($query) {
 
         $query->where('maintenance_type', '=', 'free')
             ->where('status', '=', 'repair');
     }
 
-    public function scopeComplete($query){
+    public function scopeComplete($query) {
 
         $query->where('status', '=', 'complete');
     }

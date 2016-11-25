@@ -14,11 +14,11 @@ use App\Models\Sms;
 class RepairController extends Controller
 {
 
-	public function index(Sms $sms){
+	public function index(Sms $sms) {
 		return view('progress/index');
 	}
 
-    public function showProgress(Request $request, Repair $repair, RepairConnectStatus $repairConnectStatus){
+    public function showProgress(Request $request, Repair $repair, RepairConnectStatus $repairConnectStatus) {
 
 	    $page = [
 		    'title' => 'AnyComp | Отслеживание товара в ремонте'
@@ -34,7 +34,7 @@ class RepairController extends Controller
         ]);
     }
 
-    public function techList(Repair $repair, RepairConnectStatus $repairConnectStatus){
+    public function techList(Repair $repair, RepairConnectStatus $repairConnectStatus) {
 
 	    $admin= json_decode($_COOKIE['admin']);
 	    $page = [
@@ -46,10 +46,10 @@ class RepairController extends Controller
 	    $repairs['free'] = $repair->getFreeRepairs();
 	    $repairs['complete'] = $repair->getCompleteRepairs();
 
-		for($i = 0; $i < count($repairs['paid']); $i++){
+		for ($i = 0; $i < count($repairs['paid']); $i++) {
 			$repairs['paid'][$i]['statuses'] = $repairConnectStatus->getConnections($repairs['paid'][$i]->id);
 		}
-		for($i = 0; $i < count($repairs['free']); $i++){
+		for ($i = 0; $i < count($repairs['free']); $i++) {
 			$repairs['free'][$i]['statuses'] = $repairConnectStatus->getConnections($repairs['free'][$i]->id);
 		}
 
@@ -61,7 +61,7 @@ class RepairController extends Controller
 	    ]);
     }
 
-    public function addTech(){
+    public function addTech() {
 
 	    $admin= json_decode($_COOKIE['admin']);
 	    $page = [
@@ -75,7 +75,7 @@ class RepairController extends Controller
 	    ]);
     }
 
-	public function saveTech(Request $request, Repair $repair, Client $client, Sms $sms){
+	public function saveTech(Request $request, Repair $repair, Client $client, Sms $sms) {
 
 		$newClient = array();
 		$newClient['second_name'] = $request->input('person_second_name');
@@ -114,7 +114,7 @@ class RepairController extends Controller
 		return redirect()->route('admin.repair.add_statuses', ['repair_id' => $repair_id]);
 	}
 
-	public function addStatuses(Request $request, RepairStatus $repairStatus){
+	public function addStatuses(Request $request, RepairStatus $repairStatus) {
 
 		$repair_id = $request->input('repair_id') ?? 0;
 
@@ -134,7 +134,7 @@ class RepairController extends Controller
 		]);
 	}
 
-	public function saveStatuses(Request $request, RepairConnectStatus $repairConnectStatus){
+	public function saveStatuses(Request $request, RepairConnectStatus $repairConnectStatus) {
 
 		$statuses = $request->all();
 		$repair_id = $request->input('repair_id') ?? 0;
@@ -149,12 +149,12 @@ class RepairController extends Controller
 		return redirect()->route('admin.repair.tech_list');
 	}
 
-	public function updateStatus(Request $request, RepairConnectStatus $repairConnectStatus){
+	public function updateStatus(Request $request, RepairConnectStatus $repairConnectStatus) {
 
 		$done_status = -1;
-		if($request->input('status') === 'true'){
+		if ($request->input('status') === 'true') {
 			$done_status = 1;
-		}elseif($request->input('status') === 'false'){
+		} elseif ($request->input('status') === 'false') {
 			$done_status = 0;
 		}
 		$repairConnectStatus->setDoneStatus($request->input('status_id'), $done_status);

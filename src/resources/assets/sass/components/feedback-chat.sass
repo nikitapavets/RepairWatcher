@@ -1,0 +1,89 @@
+@import "bourbon"
+@import "../_vars"
+
+.feedback-chat
+  position: fixed
+  bottom: 15px
+  right: 15px
+  width: 350px
+  background-color: #f6f6f6
+  border-radius: 5px
+  box-shadow: 2px 2px 4px 0 rgba(darken($main_color, 25%), .5)
+  z-index: 999999
+  @media only screen and (max-width : 480px)
+    width: 100%
+    bottom: 0
+    right: 0
+  header
+    background-color: darken($main_color, 25%)
+    padding: 15px
+    text-transform: uppercase
+    color: #fff
+    border-radius: 5px 5px 0 0
+  &__body
+    padding: 15px
+    padding-bottom: 0
+    height: 200px
+    overflow-y: scroll
+    .message
+      position: relative
+      margin-bottom: 15px
+      min-height: 50px
+      &__author
+        background-size: cover
+        background-image: url("/img/team/alena.png")
+        width: 50px
+        height: 50px
+        border-radius: 10em
+        position: absolute
+        svg
+          width: 50px
+          height: 50px
+      &.manager
+        .message__author
+          left: 0
+          top: 0
+        .message__content
+          margin-left: 65px
+      &.client
+        .message__author
+          right: 0
+          top: 0
+        .message__content
+          margin-right: 65px
+          text-align: right
+
+  footer
+    padding: 15px
+    position: relative
+    padding-right: 74px
+    textarea
+      resize: none
+      width: 100%
+      border: none
+      border-radius: 5px
+      background-color: darken($main_color, 25%)
+      outline: none
+      padding: 5px 10px
+      display: block
+      margin: 0
+      color: #fff
+      &::placeholder
+        color: #fff
+    button
+      background-color: #fff
+      border: none
+      border-radius: 5px
+      background-color: darken($main_color, 25%)
+      position: absolute
+      top: 15px
+      right: 15px
+      width: 52px
+      height: 52px
+      outline: none
+      padding-top: 5px
+      svg
+        width: 30px
+        height: 30px
+
+

@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class RepairStatus extends Model
 {
-	/**
-	 * @return \Illuminate\Database\Eloquent\Collection|static[]
-	 */
-    public function getAllStatuses(){
+
+    public function getAllStatuses() {
 
 	    return $this->all();
     }
@@ -18,6 +16,4 @@ class RepairStatus extends Model
 
 
     }
-
-
 }

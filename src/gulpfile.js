@@ -63,7 +63,7 @@ gulp.task('scriptlibs', function() {
     .pipe(gulp.dest('resources/assets/js'));
 });
 
-gulp.task('watch', ['styles', 'scripts', 'connect-sync'],function () {
+gulp.task('watch', ['connect-sync'],function () {
     gulp.watch('resources/assets/sass/**/*.sass', ['styles']);
     gulp.watch('./**/*.php', browserSync.reload);
     gulp.watch('./resources/assets/js/**/*.js', ['scripts'], browserSync.reload);

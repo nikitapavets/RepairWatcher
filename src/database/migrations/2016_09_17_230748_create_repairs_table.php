@@ -13,7 +13,7 @@ class CreateRepairsTable extends Migration
      */
     public function up()
     {
-       Schema::create('repairs', function(Blueprint $table){
+       Schema::create('repairs', function(Blueprint $table) {
 
             $table->increments('id');
             $table->integer('client_id')->unsigned();

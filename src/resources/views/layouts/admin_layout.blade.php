@@ -16,7 +16,7 @@
                     <div class="logo--label"><span class="any">Any</span><span class="comp">Comp</span></div>
                 </div>
 
-                <nav class="top-menu">
+                <nav class="top-menu" >
                     <ul>
                         <li>
                             <a href="#">

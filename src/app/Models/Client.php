@@ -14,7 +14,7 @@ class Client extends Model
     private $_address;
     private $_tel;
 
-    public function init(array $params){
+    public function init(array $params) {
 
         $this->_first_name = $params['first_name'] ?? '';
         $this->_second_name = $params['second_name'] ?? '';
@@ -23,7 +23,7 @@ class Client extends Model
         $this->_tel = $params['tel'] ?? '';
     }
 
-    public function addToDB(){
+    public function addToDB() {
         $this->_id = $this->insertGetId([
             'first_name' => $this->_first_name,
             'second_name' => $this->_second_name,
@@ -35,7 +35,7 @@ class Client extends Model
         ]);
     }
 
-    public function getId(){
+    public function getId() {
         return $this->_id;
     }
 }

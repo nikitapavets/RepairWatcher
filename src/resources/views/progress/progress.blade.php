@@ -420,16 +420,9 @@
         <div class="feedback-chat__body">
             <div class="message manager">
                 <div class="message__author"></div>
-                <div class="message__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, rem.</div>
+                <div class="message__content">Добрый день! Могу чем-нибудь помочь?</div>
             </div>
-            <div class="message client">
-                <div class="message__author">
-                    <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <use xlink:href='#chat__user'></use>
-                    </svg>
-                </div>
-                <div class="message__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, rem.</div>
-            </div>
+
         </div>
         <footer>
             <textarea rows="2" placeholder="Ваше сообщение" id="feedback-chat__msg"></textarea>

@@ -6,31 +6,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function getAdmins(){
+    public function getAdmins() {
 
         $admins = $this->admins()->get();
 
         return $admins;
     }
 
-    public function scopeAdmins($query){
+    public function scopeAdmins($query) {
 
         $query->where('rang', '=', 'admin');
     }
 
-    public function getUsers(){
+    public function getUsers() {
 
         $users = $this->users()->get();
 
         return $users;
     }
 
-    public function scopeUsers($query){
+    public function scopeUsers($query) {
 
         $query->where('rang', '=', 'user');
     }
 
-    public function getAdmin($login, $password){
+    public function getAdmin($login, $password) {
 
         $admin = $this->admins()
             ->where('login', '=', $login)

@@ -12,7 +12,7 @@ class RepairConnectStatus extends Model {
 	 * @param $status_id
 	 * @return mixed
 	 */
-    public function addConnection($repair_id, $status_id){
+    public function addConnection($repair_id, $status_id) {
 
 	    return $this->insert([
     		'repair_id' => $repair_id,
@@ -22,7 +22,7 @@ class RepairConnectStatus extends Model {
 	    ]);
     }
 
-    public function getConnections($repair_id){
+    public function getConnections($repair_id) {
 
 	    $statuses= $this->join('repair_statuses', 'repair_connect_statuses.status_id', '=', 'repair_statuses.id')
 		    ->select(
@@ -35,7 +35,7 @@ class RepairConnectStatus extends Model {
 	    return $statuses;
     }
 
-    public function getStatusesForRepair($repair_id){
+    public function getStatusesForRepair($repair_id) {
 
 	    $statuses= $this->join('repair_statuses', 'repair_connect_statuses.status_id', '=', 'repair_statuses.id')
 		    ->select(
@@ -49,7 +49,7 @@ class RepairConnectStatus extends Model {
 	    return $statuses;
     }
 
-    public function setDoneStatus($connect_id, $new_done){
+    public function setDoneStatus($connect_id, $new_done) {
 
     	$this->where('id', '=', $connect_id)
 		    ->update(['done' => $new_done]);
