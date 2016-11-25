@@ -12,7 +12,6 @@ you will get a notification about it.
     * Laravel/PHP
   * Frontend:
     * jQuery
-    * Material design
 * Database:
   * MySQL
   
@@ -20,14 +19,13 @@ you will get a notification about it.
 The project will support two UI:
 * Manager interface
 * Client interface
+
 Manager interface will include following components:
 * Authorization page
-* Registration page
 * Manager page
-* Setting page
 * Products list page
 * Add product page
-* Statistic page
+
 Client interface will include following components:
 * Enter page
 * Repair progress page
@@ -48,14 +46,8 @@ Because this system has much in common with company database, will be nice to co
 
 ## System Requirements
 ### *Functional Requirements*
-* Manager registration
-  * via email and password
-  * via VK
-  * via Facebook
 * Manager entering the system
   * by email and password
-  * by VK
-  * by Facebook
 * Client entering the system
   * by product hash code
 * Opportunity to add product:
@@ -69,24 +61,16 @@ Because this system has much in common with company database, will be nice to co
   * Product complect
   * Product diagnosis
   * Receipt number
-  * Date
   * Repair type
 * Working with products
   * Adding
   * Editing
     * Status
-    * Hash
   * Removing
   * Show products list
     * Sorting
     * Searching
     * Customer's information
-* Working with managers
-  * Adding
-  * Editing
-    * Rang
-  * Removing
-  * Show users list
 * Working with clients
   * Sending sms
 * Client opportunities:
@@ -97,7 +81,6 @@ Because this system has much in common with company database, will be nice to co
 #### *Software quality attributes*
 * Security
   * Only manager can add, edit and remove product
-  * Only manager can add new managers
   * Сlient should not have a possibility to see information about someone else's product
 * Valid user interface
   * All pages should be viewed equally in 5 last versions of Chrome, Firefox, Safari and Opera
