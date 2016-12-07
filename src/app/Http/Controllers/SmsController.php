@@ -19,6 +19,5 @@ class SmsController extends Controller
 		} else {
 			echo "bad";
 		}
-		echo "ok";
 	}
 }
