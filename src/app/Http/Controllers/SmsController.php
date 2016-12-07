@@ -10,7 +10,7 @@ use App\Models\Sms;
 class SmsController extends Controller
 {
 	public function callback(Request $request, Sms $sms){
-		/*$name = $request->input("name");
+		$name = $request->input("name");
 		$phone = $request->input("phone");
 		$msg = "From remont.anycomp: 'I am $name, callback me $phone'";
 
@@ -18,7 +18,7 @@ class SmsController extends Controller
 			echo "ok";
 		} else {
 			echo "bad";
-		}*/
+		}
 		echo "ok";
 	}
 }
