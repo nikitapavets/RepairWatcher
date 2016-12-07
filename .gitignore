@@ -1,8 +1,10 @@
-src/node_modules
-src/bower_components
-src/public/storage
-src/vendor
+/src/node_modules
+/src/bower_components
+/src/public/storage
+/src/vendor
 /.idea
-src/Homestead.json
-src/Homestead.yaml
+/src/Homestead.json
+/src/Homestead.yaml
 src/*.env
+/src/public/css
+/src/public/js

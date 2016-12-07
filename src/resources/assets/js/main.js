@@ -87,66 +87,46 @@ $( document ).ready(function(){
     });
 
     // feedback chat
-
-    var conn = new WebSocket('ws://localhost:8080');
-    conn.onopen = function(e){
-        console.log("Connection establish!");
-    }
-
-    conn.onmessage = function(e){
-        feedbackFromManager(e.data);
-    }
-
-    function send(){
-        var data = feedbackToManager();
-        conn.send(data);
-    }
-
-    function feedbackFromManager(message){
-
-        var new_message_block = '' +
-            '<div class="message manager">' +
-            '<div class="message__author"></div>' +
-            '<div class="message__content">' + message + '</div>' +
-            '</div>';
-        $('.feedback-chat__body').append(new_message_block);
-    }
-
-    function feedbackToManager(){
-
-        var message = $('#feedback-chat__msg').val();
-        $('#feedback-chat__msg').val('');
-
-        var new_message_block = '' +
-            '<div class="message client">' +
-            '<div class="message__author">' +
-            '<svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' +
-            '<use xlink:href="#chat__user"></use>' +
-            '</svg>' +
-            '</div>' +
-            '<div class="message__content">' + message + '</div>' +
-            '</div>';
-        $('.feedback-chat__body').append(new_message_block);
-
-        return message;
-    }
-
-    $('#feedback-chat__send').click(function(event){
-
-        send();
-
-        event.preventDefault();
-        return false;
+    $(".feedback-callback.short").click(function(event){
+        $(".feedback-callback").toggleClass('hidden');
     });
 
-    $('#feedback-chat__msg').keyup(function(event){
+    $(document).click(function(event){
+        if ($(event.target).closest(".feedback-callback").length) return;
+        $(".feedback-callback.short").removeClass('hidden');
+        $(".feedback-callback.full").addClass('hidden');
+    });
 
-        if(event.keyCode == 13) {
-            send();
-            return false;
+    $("#callbackSend").click(function(event){
+
+        var phone = $("#callbackPhone").val();
+        var name = $("#callbackName").val();
+
+        if(phone == ''){
+            $("#callbackPhone").css("border-color", "red");
+            return;
+        }else if(name == ''){
+            $("#callbackName").css("border-color", "red");
+            return;
         }
-    })
 
+        $.post("/feedback/callback",
+            {
+                'phone': phone,
+                'name': name
+            }, function(data){
+                if(data == "ok") {
+                    $("#callbackSend").addClass("hidden");
+                    $("#callbackSend").next("p").removeClass("hidden").text(name + ", мы Вам скоро перезвоним!");
+                    $("#callbackPhone").val("");
+                    $("#callbackName").val("");
+                }
+            });
+
+
+
+        event.preventDefault();
+    });
 
     /* Tech list page /admin/repair/tech_list */
 

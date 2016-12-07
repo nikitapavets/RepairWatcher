@@ -236,7 +236,7 @@
                                                 <textarea rows="3" placeholder="Ваше сообщение"></textarea>
                                             </div>
                                         </div>
-                                        <button type="submit">Отправить</button>
+                                        <button type="submit" id="callbackSend">Отправить</button>
                                     </div>
                                     
                                 </div>
@@ -250,5 +250,7 @@
         </section>
         <footer class="progress-bar--footer"></footer>
     </section>
+
+    @include('components/feedback_callback')
 
 @stop

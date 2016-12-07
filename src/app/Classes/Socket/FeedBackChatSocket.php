@@ -16,6 +16,7 @@ class FeedBackChatSocket extends BaseSocket
 	public function onOpen(ConnectionInterface $conn) {
 
 		$this->_clients->attach($conn);
+		echo "New Connection!";
 	}
 
 	public function onMessage(ConnectionInterface $from, $msg) {

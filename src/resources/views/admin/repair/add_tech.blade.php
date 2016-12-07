@@ -9,11 +9,11 @@
             <div class="person-info">
                 <header class="info-header">Клиент</header>
                 <label for="person_last_name">
-                    <p>Фамилия:</p>
+                    <p>Фамилия: <span class="person-info__require">*</span></p>
                     <input type="text" id="person_last_name" name="person_second_name" pattern="^[а-яА-Я|ё|Ё]+$" placeholder="Павец" required>
                 </label>
                 <label for="person_first_name">
-                    <p>Имя:</p>
+                    <p>Имя: <span class="person-info__require">*</span></p>
                     <input type="text" id="person_first_name" name="person_first_name" pattern="^[а-яА-Я|ё|Ё]+$" placeholder="Никита" required>
                 </label>
                 <label for="person_father_name">
@@ -25,7 +25,7 @@
                     <input type="text" id="person_address" name="person_address" placeholder="г. Минск, ул. Фроликова, д. 31, кв. 66">
                 </label>
                 <label for="person_tel">
-                    <p>Номер телефона:</p>
+                    <p>Номер телефона: <span class="person-info__require">*</span></p>
                     <input type="tel" id="person_tel" name="person_tel" pattern="^375(29|33|44)[0-9]{7}$" placeholder="375336136132" required>
                 </label>
             </div>
@@ -34,7 +34,7 @@
             <div class="person-info">
                 <header class="info-header">Техника</header>
                 <label for="product_title">
-                    <p>Наименование:</p>
+                    <p>Наименование: <span class="person-info__require">*</span></p>
                     <input type="text" id="product_title" name="product_title" placeholder="Ноутбук N510" required>
                 </label>
                 <label for="product_code">
@@ -55,7 +55,7 @@
             <div class="person-info">
                 <header class="info-header">Дополнительно</header>
                 <label for="info_receipt_number">
-                    <p>Номер квитанции:</p>
+                    <p>Номер квитанции: <span class="person-info__require">*</span></p>
                     <input type="text" id="info_receipt_number" name="info_receipt_number" pattern="[0-9]+" placeholder="150" required>
                 </label>
                 <label for="info_repair_type_1">

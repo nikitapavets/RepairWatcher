@@ -413,25 +413,7 @@
 
     </section>
 
-    <section class="feedback-chat">
-        <header>
-            Связь с менеджером
-        </header>
-        <div class="feedback-chat__body">
-            <div class="message manager">
-                <div class="message__author"></div>
-                <div class="message__content">Добрый день! Могу чем-нибудь помочь?</div>
-            </div>
+    @include('components/feedback_callback')
 
-        </div>
-        <footer>
-            <textarea rows="2" placeholder="Ваше сообщение" id="feedback-chat__msg"></textarea>
-            <button type="submit" id="feedback-chat__send">
-                <svg class="contacts-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <use xlink:href='#chat__send'></use>
-                </svg>
-            </button>
-        </footer>
-    </section>
 
 @stop

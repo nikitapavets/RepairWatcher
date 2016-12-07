@@ -15,21 +15,27 @@ class FeedBackChatServer extends Command
 
 	protected $description = 'Start feedback chat server';
 
+	protected $port = 4500;
+
 	public function __construct() {
 		parent::__construct();
 	}
 
 	public function handle() {
 
-		$this->info("FeedBackChatServer was started successfully");
+
 		$server = IoServer::factory(
 			new HttpServer(
 				new WsServer(
 					new FeedBackChatSocket()
 				)
 			),
-			8080
+			$this->port,
+			"93.125.99.73"
 		);
+
+
+		$this->info("FeedBackChatServer was started successfully on port $this->port");
 
 		$server->run();
 	}

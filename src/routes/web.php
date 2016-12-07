@@ -4,6 +4,12 @@ Route::pattern('id', '[0-9]+');
 
 Route::get('/', ['as' => 'index', 'uses' => 'RepairController@index']);
 
+Route::group(['prefix' => 'feedback'], function(){
+
+	Route::post('/callback', ['as' => 'feedback.callback', 'uses' => 'SmsController@callback']);
+
+});
+
 Route::group(['prefix' => 'progress'], function(){
 
 	Route::group(['middleware' => 'progress'], function(){
